@@ -6,10 +6,146 @@
     <title>RedLine</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        .navbar {
+            background-color: #fe4240;
+        }
+        
+        .navbar-nav .nav-link {
+            color: white;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: #000;
+        }
+
+        .dropdown-menu {
+            background-color: #000;
+        }
+        
+        .dropdown-item {
+            color: white;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #fe4240;
+            color: white;
+        }
+        #age-verification {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        
+    </style>
 </head>
 <body>
-    <h1>ALLEZCINE!</h1>
-</header>
+    <div id="age-verification">
+        <h2>Entrer votre date de naissance</h2>
+        <input type="date" id="dob" class="form-control w-50 my-3">
+        <button onclick="checkAge()" class="btn btn-danger">Valider</button>
+    </div>
+      
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <script>
+                    function checkAge() {
+                        const dob = document.getElementById('dob').value;
+                        if (!dob) return alert("Veuillez entrer votre date de naissance");
+                        
+                        const birthDate = new Date(dob);
+                        const today = new Date();
+                        let age = today.getFullYear() - birthDate.getFullYear();
+                        const monthDiff = today.getMonth() - birthDate.getMonth();
+                        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                            age--;
+                        }
+                        
+                        if (age >= 18) {
+                            document.getElementById('age-verification').style.display = 'none';
+                            document.getElementById('main-content').style.display = 'block';
+                        } else {
+                            alert("Désolé, vous devez avoir au moins 18 ans pour accéder à ce site.");
+                        }
+                    }
+                </script>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand nav-logo" href="#"><span>ALLEZ</span>CINE!</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">HOME</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            GENRE
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#featured" data-genre="action">Action</a></li>
+                            <li><a class="dropdown-item" href="#featured" data-genre="comedy">Comedy</a></li>
+                            <li><a class="dropdown-item" href="#featured" data-genre="western">Western</a></li>
+                            <li><a class="dropdown-item" href="#featured" data-genre="fiction">Fiction</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#featured">FEATURED</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#series">SERIES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#shop">SHOP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">CONTACT</a>
+                    </li>
+                    <li class="nav-item d-block d-md-none">
+                        <a class="nav-link" href="#" id="mobileLoginBtn">LOGIN</a>
+                    </li>
+                    <li class="nav-item d-block d-md-none">
+                        <a class="nav-link" href="#" id="mobileRegisterBtn">REGISTER</a>
+                    </li>
+                </ul>
+                <form class="d-flex ms-lg-3">
+                    <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
+                    <button class="btn btn-dark" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
 
 <div class="container my-4">
     <h2>Vérification de l'âge</h2>
@@ -30,7 +166,7 @@
             } else {
                 alert("Bienvenue sur ALLEZCINE!");
             }
-    })
+    });
 </script>
 </body>
 </html>
