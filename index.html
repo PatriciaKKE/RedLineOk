@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,29 +10,35 @@
 
     <style>
         .navbar {
-            background-color: #fe4240;
+        background-color: transparent; 
+        position: absolute;
+        width: 100%;
+        z-index: 10;
         }
-        
+
         .navbar-nav .nav-link {
             color: white;
         }
-        
+
         .navbar-nav .nav-link:hover {
             color: #000;
         }
 
         .dropdown-menu {
-            background-color: #000;
+            background-color: white;
+           
         }
-        
-        .dropdown-item {
-            color: white;
+
+        .dropdown-itemP:hover{
+            color: black;
+            background-color: #fe4240;
         }
-        
+
         .dropdown-item:hover {
             background-color: #fe4240;
-            color: white;
+            color: black;
         }
+
         #age-verification {
             position: fixed;
             top: 0;
@@ -47,58 +54,64 @@
             text-align: center;
         }
 
+        #home {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh; 
+        }
+        .carousel-item img{
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        .carousel-inner{
+            width: 100%;
+            height: 100vh; 
+        }
+        .carousel-item {
+            width: 100%;
+            height: 100vh; 
+        }
+
+        .carousel-item::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 500px;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
         
+
+        .carousel-caption {
+            position: absolute;
+            bottom: 20%;
+            z-index: 2;
+        }
+        .carousel-indicators {
+            margin-bottom: 170px;
+        }
+        
+        .carousel-indicators button {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 0 20px;
+        }
+    
     </style>
 </head>
-<body> 
-    <div id="age-verification">
-        <h2>Entrer votre date de naissance</h2>
-        <input type="date" id="dob" class="form-control w-50 my-3">
-        <button onclick="checkAge()" class="btn btn-danger">Valider</button>
-    </div>
-      
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <script>
-                    function checkAge() {
-                        const dob = document.getElementById('dob').value;
-                        if (!dob) return alert("Veuillez entrer votre date de naissance");
-                        
-                        const birthDate = new Date(dob);
-                        const today = new Date();
-                        let age = today.getFullYear() - birthDate.getFullYear();
-                        const monthDiff = today.getMonth() - birthDate.getMonth();
-                        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-                            age--;
-                        }
-                        
-                        if (age >= 18) {
-                            document.getElementById('age-verification').style.display = 'none';
-                            document.getElementById('main-content').style.display = 'block';
-                        } else {
-                            alert("Vous devez avoir au moins 18 ans pour accéder à ce site. Vous serez redirigé vers IMDB.");
-                            window.location.href = "https://www.imdb.com";
-                        }
-                    }
-                </script>
-            </div>
-           
-          </div>
-        </div>
-      </div>
-      
-
+<body>
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand nav-logo" href="#"><span>ALLEZ</span>CINE!</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -107,14 +120,15 @@
                         <a class="nav-link" href="#home">HOME</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             GENRE
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#featured" data-genre="action">Action</a></li>
-                            <li><a class="dropdown-item" href="#featured" data-genre="comedy">Comedy</a></li>
-                            <li><a class="dropdown-item" href="#featured" data-genre="western">Western</a></li>
-                            <li><a class="dropdown-item" href="#featured" data-genre="fiction">Fiction</a></li>
+                            <li><a class="dropdown-item" href="#" data-genre="action">Action</a></li>
+                            <li><a class="dropdown-item" href="#" data-genre="comedy">Comedy</a></li>
+                            <li><a class="dropdown-item" href="#" data-genre="western">Western</a></li>
+                            <li><a class="dropdown-item" href="#" data-genre="fiction">Fiction</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -129,12 +143,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">CONTACT</a>
                     </li>
-                    <li class="nav-item d-block d-md-none">
-                        <a class="nav-link" href="#" id="mobileLoginBtn">LOGIN</a>
-                    </li>
-                    <li class="nav-item d-block d-md-none">
-                        <a class="nav-link" href="#" id="mobileRegisterBtn">REGISTER</a>
-                    </li>
                 </ul>
                 <form class="d-flex ms-lg-3">
                     <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
@@ -144,5 +152,80 @@
         </div>
     </nav>
 
+
+
+    <div id="home" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#home" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#home" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#home" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#home" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="image/img2.jpg" class="d-block w-100" alt="Slide 1">
+            </div>
+
+            <div class="carousel-item">
+                <img src="image/img1.jpg" class="d-block w-100" alt="Slide 2">
+            </div>
+
+            <div class="carousel-item">
+                <img src="image/img3.jpg" class="d-block w-100" alt="Slide 3">
+            </div>
+
+            <div class="carousel-item">
+                <img src="image/img4.jpg" class="d-block w-100" alt="Slide 4">
+            </div>
+        </div>
+    </div>
+
+    <div id="age-verification">
+        <h2>Entrer votre date de naissance</h2>
+        <input type="date" id="dob" class="form-control w-50 my-3">
+        <button onclick="checkAge()" class="btn btn-danger">Valider</button>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <script>
+                        function checkAge() {
+                            const dob = document.getElementById('dob').value;
+                            if (!dob) return alert("Veuillez entrer votre date de naissance");
+
+                            const birthDate = new Date(dob);
+                            const today = new Date();
+                            let age = today.getFullYear() - birthDate.getFullYear();
+                            const monthDiff = today.getMonth() - birthDate.getMonth();
+                            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                                age--;
+                            }
+
+                            if (age >= 18) {
+                                document.getElementById('age-verification').style.display = 'none';
+                                document.getElementById('main-content').style.display = 'block';
+                            } else {
+                                alert("Vous devez avoir au moins 18 ans pour accéder à ce site. Vous serez redirigé vers IMDB.");
+                                window.location.href = "https://www.imdb.com";
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
