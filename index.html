@@ -83,7 +83,8 @@
                             document.getElementById('age-verification').style.display = 'none';
                             document.getElementById('main-content').style.display = 'block';
                         } else {
-                            alert("Désolé, vous devez avoir au moins 18 ans pour accéder à ce site.");
+                            alert("Vous devez avoir au moins 18 ans pour accéder à ce site. Vous serez redirigé vers IMDB.");
+                            window.location.href = "https://www.imdb.com";
                         }
                     }
                 </script>
@@ -146,27 +147,5 @@
         </div>
     </nav>
 
-
-<div class="container my-4">
-    <h2>Vérification de l'âge</h2>
-    <form id="agejeune">
-        <label for="age">Entrez votre âge :</label>
-        <input type="number" id="age" name="age" required>
-        <button type="submit" class="btn btn-primary">Vérifier</button>
-    </form>
-</div>
-
-<script>
-    document.getElementById('agejeune').addEventListener('submit', function(event) {
-        event.preventDefault();
-        var age = document.getElementById('age').value;
-        if (age < 18) {
-                alert("Vous devez avoir au moins 18 ans pour accéder à ce site. Vous serez redirigé vers IMDB.");
-                window.location.href = "https://www.imdb.com";
-            } else {
-                alert("Bienvenue sur ALLEZCINE!");
-            }
-    });
-</script>
 </body>
 </html>
