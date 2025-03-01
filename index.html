@@ -542,6 +542,18 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const movieItems = document.querySelectorAll('.movie-item');
+
+            movieItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.transition = 'transform 0.3s ease';
+                    this.style.cursor = 'pointer';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
         });
     </script>
 </body>
