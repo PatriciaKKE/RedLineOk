@@ -275,6 +275,87 @@
             color: #777;
             font-size: 0.9em;
         }
+
+
+        .featured-header {
+            border-left: 3px solid #fe4240;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+        .movie-card {
+            display: none;
+            background-color: #ddd;
+            width: 100%;
+            height: 250px;
+            margin-bottom: 15px;
+            text-align: center;
+            padding-top: 200px;
+            font-weight: bold;
+        }
+        .visible {
+            display: block;
+        }
+        .genre-filters button {
+            margin-right: 5px;
+        }
+        #movies-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .movie-card-container {
+            width: calc(16.66% - 15px);
+        }
+        @media (max-width: 992px) {
+            .movie-card-container {
+                width: calc(33.33% - 15px);
+            }
+        }
+        @media (max-width: 768px) {
+            .movie-card-container {
+                width: calc(50% - 15px);
+            }
+        }
+
+        .shop-movies {
+            border-left: 3px solid #fe4240;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+        .movie-card1 {
+            display: none;
+            background-color: #ddd;
+            width: 100%;
+            height: 250px;
+            margin-bottom: 15px;
+            text-align: center;
+            padding-top: 200px;
+            font-weight: bold;
+        }
+        .visible1 {
+            display: block;
+        }
+        .genre-filters-movies button {
+            margin-right: 5px;
+        }
+        #movies-container1 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .movie-card-container1 {
+            width: calc(16.66% - 15px);
+        }
+        @media (max-width: 992px) {
+            .movie-card-container1 {
+                width: calc(33.33% - 15px);
+            }
+        }
+        @media (max-width: 768px) {
+            .movie-card-container1 {
+                width: calc(50% - 15px);
+            }
+        }
     </style>
 </head>
 
@@ -658,15 +739,164 @@
 
 
     <section>
-        <div class="container">
+        <div class="container mt-4">
            <h2 class="featured-header">FEATURED MOVIES</h2> 
+           <div class="genre-filters mb-4">
+                <button class="btn btn-danger filter-btn" data-filter="all">All</button>
+                <button class="btn btn-outline-danger filter-btn" data-filter="action">Actions</button>
+                <button class="btn btn-outline-danger filter-btn" data-filter="comedy">Policier</button>
+            </div>
+
+            <div class="row" id="movies-container">
+                <div class="movie-card-container">
+                    <div class="movie-card action visible">God's Compass (2016)</div>
+                </div>
+                <div class="movie-card-container">
+                    <div class="movie-card action visible">Bad Moms (2016)</div>
+                </div>
+                <div class="movie-card-container">
+                    <div class="movie-card action visible">Jason Bourne (2016)</div>
+                </div>
+                <div class="movie-card-container">
+                    <div class="movie-card policier visible">Rezort (2016)</div>
+                </div>
+                <div class="movie-card-container">
+                    <div class="movie-card policier visible">Peter (2016)</div>
+                </div>
+                <div class="movie-card-container">
+                    <div class="movie-card action visible">ISRA 88 (2016)</div>
+                </div>
+                
+                <div class="movie-card-container">
+                    <div class="movie-card action extra">War Dogs (2016)</div>
+                </div>
+                <div class="movie-card-container">
+                    <div class="movie-card policier extra">The Other Side (2016)</div>
+                </div>
+                <div class="movie-card-container">
+                    <div class="movie-card action extra">Civil War (2016)</div>
+                </div>
+                <div class="movie-card-container">
+                    <div class="movie-card policier extra">The Secret Life of Pets (2016)</div>
+                </div>
+                <div class="movie-card-container">
+                    <div class="movie-card action extra">The Jungle Book (2016)</div>
+                </div>
+                <div class="movie-card-container">
+                    <div class="movie-card policier extra">Assassin's Creed 3 (2016)</div>
+                </div>
+            </div>
+            
+            <button class="btn btn-danger mt-3" id="toggle-movies">Plus des films</button>
         </div>
     </section>
 
+    <script>
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                let filter = this.getAttribute('data-filter');
+                document.querySelectorAll('.movie-card').forEach(movie => {
+                    if (filter === 'all' || movie.classList.contains(filter)) {
+                        movie.classList.add('visible');
+                    } else {
+                        movie.classList.remove('visible');
+                    }
+                });
+            });
+        });
+        
+        document.getElementById('toggle-movies').addEventListener('click', function() {
+            let extraMovies = document.querySelectorAll('.movie-card.extra');
+            if (this.textContent === 'Plus des films') {
+                extraMovies.forEach(movie => movie.classList.add('visible'));
+                this.textContent = 'Moins des films';
+            } else {
+                extraMovies.forEach(movie => movie.classList.remove('visible'));
+                this.textContent = 'Plus des films';
+            }
+        });
+    </script>
+
+    <section>
+        <div class="container mt-4">
+           <h2 class="shop-movies">SHOP MOVIES</h2> 
+           <div class="genre-filters-movies mb-4">
+                <button class="btn btn-danger filter-btn" data-filter="all">All</button>
+                <button class="btn btn-outline-danger filter-btn" data-filter="action">Actions</button>
+                <button class="btn btn-outline-danger filter-btn" data-filter="comedy">Policier</button>
+            </div>
+
+            <div class="row" id="movies-container1">
+                <div class="movie-card-container1">
+                    <div class="movie-card1 action visible1">God's Compass (2016)</div>
+                </div>
+                <div class="movie-card-container1">
+                    <div class="movie-card1 action visible1">Bad Moms (2016)</div>
+                </div>
+                <div class="movie-card-container1">
+                    <div class="movie-card1 action visible1">Jason Bourne (2016)</div>
+                </div>
+                <div class="movie-card-container1">
+                    <div class="movie-card1 policier visible1">Rezort (2016)</div>
+                </div>
+                <div class="movie-card-container1">
+                    <div class="movie-card1 policier visible1">Peter (2016)</div>
+                </div>
+                <div class="movie-card-container1">
+                    <div class="movie-card1 action visible1">ISRA 88 (2016)</div>
+                </div>
+                
+                <div class="movie-card-container1">
+                    <div class="movie-card1 action extra">War Dogs (2016)</div>
+                </div>
+                <div class="movie-card-container1">
+                    <div class="movie-card1 policier extra">The Other Side (2016)</div>
+                </div>
+                <div class="movie-card-container1">
+                    <div class="movie-card1 action extra">Civil War (2016)</div>
+                </div>
+                <div class="movie-card-container1">
+                    <div class="movie-card1 policier extra">The Secret Life of Pets (2016)</div>
+                </div>
+                <div class="movie-card-container1">
+                    <div class="movie-card1 action extra">The Jungle Book (2016)</div>
+                </div>
+                <div class="movie-card-container1">
+                    <div class="movie-card1 policier extra">Assassin's Creed 3 (2016)</div>
+                </div>
+            </div>
+            
+            <button class="btn btn-danger mt-3" id="toggle-movies1">Plus des films</button>
+        </div>
+    </section>
+
+
+    <script>
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                let filter = this.getAttribute('data-filter');
+                document.querySelectorAll('.movie-card1').forEach(movie => {
+                    if (filter === 'all' || movie.classList.contains(filter)) {
+                        movie.classList.add('visible1');
+                    } else {
+                        movie.classList.remove('visible1');
+                    }
+                });
+            });
+        });
+        
+        document.getElementById('toggle-movies1').addEventListener('click', function() {
+            let extraMovies = document.querySelectorAll('.movie-card1.extra');
+            if (this.textContent === 'Plus des films') {
+                extraMovies.forEach(movie => movie.classList.add('visible1'));
+                this.textContent = 'Moins des films';
+            } else {
+                extraMovies.forEach(movie => movie.classList.remove('visible1'));
+                this.textContent = 'Plus des films';
+            }
+        });
+    </script>
     
-
-
-
 
 
 
