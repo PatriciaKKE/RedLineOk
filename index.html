@@ -114,7 +114,7 @@
         .bar a {
             color: white;
             text-decoration: none;
-            
+
         }
 
         .bar .btn {
@@ -183,13 +183,14 @@
             color: white;
         }
 
-        .social-buttons{
+        .social-buttons {
             position: fixed;
-            left:0 px;
+            left: 0 px;
             top: 50%;
             transform: translateY(-50%);
             z-index: 999;
         }
+
         .social-btn {
             display: block;
             width: 40px;
@@ -201,39 +202,43 @@
             transition: all 0.3s ease;
             overflow: hidden;
         }
+
         .social-btn:hover {
             width: 120px;
         }
+
         .social-btn i {
             margin-right: 10px;
         }
-        
+
         .facebook {
             background-color: #3b5998;
         }
-        
+
         .twitter {
             background-color: #1da1f2;
         }
-        
+
         .instagram {
             background-color: yellow;
         }
-        
+
         .youtube {
             background-color: #bd081c;
         }
 
-        
+
         .gallery-container {
             padding: 20px;
             max-width: 900px;
             margin: 0 auto;
         }
-        .movie-item { 
+
+        .movie-item {
             text-align: center;
             margin-bottom: 20px;
         }
+
         .movie-thumbnail {
             height: 200px;
             margin-bottom: 10px;
@@ -247,30 +252,29 @@
             cursor: pointer;
             transition: all 0.2s ease;
         }
-        
+
         .movie-thumbnail:hover {
             opacity: 0.85;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
-        
+
         .movie-title {
             font-weight: bold;
             margin-bottom: 5px;
             cursor: pointer;
         }
-        
+
         .movie-title:hover {
             color: #007bff;
             text-decoration: underline;
         }
-        
-        .movie-year, .movie-genre {
+
+        .movie-year,
+        .movie-genre {
             display: inline-block;
             color: #777;
             font-size: 0.9em;
         }
-        
-
     </style>
 </head>
 
@@ -377,45 +381,45 @@
             <button onclick="checkAge()" class="btn btn-danger">Valider</button>
         </div>
 
-        
-    
+
+
     </div>
 
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <script>
-                            function checkAge() {
-                                const dob = document.getElementById('dob').value;
-                                if (!dob) return alert("Veuillez entrer votre date de naissance");
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <script>
+                        function checkAge() {
+                            const dob = document.getElementById('dob').value;
+                            if (!dob) return alert("Veuillez entrer votre date de naissance");
 
-                                const birthDate = new Date(dob);
-                                const today = new Date();
-                                let age = today.getFullYear() - birthDate.getFullYear();
-                                const monthDiff = today.getMonth() - birthDate.getMonth();
-                                if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-                                    age--;
-                                }
-
-                                if (age >= 18) {
-                                    document.getElementById('age-verification').style.display = 'none';
-                                    document.getElementById('main-content').style.display = 'block';
-                                } else {
-                                    alert("Vous devez avoir au moins 18 ans pour accéder à ce site. Vous serez redirigé vers IMDB.");
-                                    window.location.href = "https://www.imdb.com";
-                                }
+                            const birthDate = new Date(dob);
+                            const today = new Date();
+                            let age = today.getFullYear() - birthDate.getFullYear();
+                            const monthDiff = today.getMonth() - birthDate.getMonth();
+                            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                                age--;
                             }
-                        </script>
-                    </div>
+
+                            if (age >= 18) {
+                                document.getElementById('age-verification').style.display = 'none';
+                                document.getElementById('main-content').style.display = 'block';
+                            } else {
+                                alert("Vous devez avoir au moins 18 ans pour accéder à ce site. Vous serez redirigé vers IMDB.");
+                                window.location.href = "https://www.imdb.com";
+                            }
+                        }
+                    </script>
                 </div>
             </div>
         </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    </div>
+    
 
 
     <div class="social-buttons">
@@ -426,50 +430,51 @@
     </div>
 
 
-        <div class="container gallery-container">
-            <div class="row">
-                <div class="col-md-2 col-sm-4 col-4 movie-item">
-                    <div class="movie-thumbnail "> <img src="image/img4.jpg" alt="not image"></div>
-                    <div class="movie-title">Citizen Soldier</div>
-                    <div class="movie-year">2016</div>
-                    <div class="movie-genre">Genre</div>
-                </div>
-    
-                <div class="col-md-2 col-sm-4 col-6 movie-item">
-                    <div class="movie-thumbnail"><img src="image/suit1.jpg" alt="not image"></div>
-                    <div class="movie-title">X-Men</div>
-                    <div class="movie-year">2016</div>
-                    <div class="movie-genre">Genre</div>
-                </div>
-    
-                <div class="col-md-2 col-sm-8 col-6 movie-item">
-                    <div class="movie-thumbnail"><img src="image/why2.jpg" alt="not image"></div>
-                    <div class="movie-title">Greater</div>
-                    <div class="movie-year">2016</div>
-                    <div class="movie-genre">Genre</div>
-                </div>
-    
-                <div class="col-md-2 col-sm-3 col-6 movie-item">
-                    <div class="movie-thumbnail"><img src="image/squid.jpg" alt="not image"></div>
-                    <div class="movie-title">Light B/t Oceans</div>
-                    <div class="movie-year">2016</div>
-                    <div class="movie-genre">Genre</div>
-                </div>
-    
-                <div class="col-md-2 col-sm-4 col-6 movie-item">
-                    <div class="movie-thumbnail"><img src="image/bfg.jpg" alt="not image"></div>
-                    <div class="movie-title">The BFG</div>
-                    <div class="movie-year">2016</div>
-                    <div class="movie-genre">Genre</div>
-                </div>
+    <div class="container gallery-container">
+        <div class="row">
+            <div class="col-md-3 col-sm-4 col-6 movie-item">
+                <div class="movie-thumbnail" data-bs-toggle="modal" data-bs-target="#citizenSoldierModal"><img src="image/img3.jpg"></div>
+                <div class="movie-title" data-bs-toggle="modal" data-bs-target="#citizenSoldierModal">Citizen Soldier</div>
+                <div class="movie-year">2016</div>
+                <div class="movie-genre">Genre</div>
+            </div>
+        
+            <div class="col-md-2 col-sm-4 col-6 movie-item">
+                <div class="movie-thumbnail" data-bs-toggle="modal" data-bs-target="#xmenModal"><img src="image/suit1.jpg"></div>
+                <div class="movie-title" data-bs-toggle="modal" data-bs-target="#xmenModal">X-Men</div>
+                <div class="movie-year">2016</div>
+                <div class="movie-genre">Genre</div>
+            </div>
+            
+            <div class="col-md-3 col-sm-4 col-6 movie-item">
+                <div class="movie-thumbnail" data-bs-toggle="modal" data-bs-target="#greaterModal"><img src="image/why2.jpg"></div>
+                <div class="movie-title" data-bs-toggle="modal" data-bs-target="#greaterModal">Greater</div>
+                <div class="movie-year">2016</div>
+                <div class="movie-genre">Genre</div>
+            </div>
+            
+            <div class="col-md-2 col-sm-4 col-6 movie-item">
+                <div class="movie-thumbnail" data-bs-toggle="modal" data-bs-target="#lightoceansModal"><img src="image/img4.jpg"></div>
+                <div class="movie-title" data-bs-toggle="modal" data-bs-target="#lightoceansModal">Light B/t Oceans</div>
+                <div class="movie-year">2016</div>
+                <div class="movie-genre">Genre</div>
+            </div>
+            
+            <div class="col-md-2 col-sm-4 col-6 movie-item">
+                <div class="movie-thumbnail" data-bs-toggle="modal" data-bs-target="#bfgModal"><img src="image/bfg.jpg"></div>
+                <div class="movie-title" data-bs-toggle="modal" data-bs-target="#bfgModal">The BFG</div>
+                <div class="movie-year">2016</div>
+                <div class="movie-genre">Genre</div>
             </div>
         </div>
-    
-<div class="modal fade" id="modal-citizen-soldier" tabindex="-1" aria-labelledby="modalCitizenSoldier" aria-hidden="true">
+    </div>
+
+
+    <div class="modal fade" id="citizenSoldierModal" tabindex="-1" aria-labelledby="citizenSoldierModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalCitizenSoldier">Citizen Soldier</h5>
+                    <h5 class="modal-title" id="citizenSoldierModalLabel">Citizen Soldier</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -501,31 +506,33 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modal-citizen-soldier" tabindex="-1" aria-labelledby="modalCitizenSoldier" aria-hidden="true">
+    
+    <div class="modal fade" id="xmenModal" tabindex="-1" aria-labelledby="xmenModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalCitizenSoldier">Citizen Soldier</h5>
+                    <h5 class="modal-title" id="xmenModalLabel">X-Men: Apocalypse</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="ratio ratio-16x9 mb-4">
-                        <iframe src="https://www.youtube.com/embed/RmQL4g54vtM" title="Citizen Soldier Trailer" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/COvnHv42T-A" title="X-Men: Apocalypse Trailer" allowfullscreen></iframe>
                     </div>
                     <h6>Description</h6>
-                    <p>Un documentaire racontant les expériences au combat de la Garde nationale de l'Oklahoma durant leur déploiement en Afghanistan.</p>
+                    <p>Après la réémergence du premier et plus puissant mutant au monde, Apocalypse, les X-Men doivent s'unir pour vaincre ses plans d'extinction.</p>
                     <div class="row mt-3">
                         <div class="col-md-6">
-                            <p><strong>Réalisateur:</strong> David Salzberg, Christian Tureaud</p>
+                            <p><strong>Réalisateur:</strong> Bryan Singer</p>
                             <p><strong>Année de sortie:</strong> 2016</p>
-                            <p><strong>Genre:</strong> Documentaire, Guerre</p>
+                            <p><strong>Genre:</strong> Action, Aventure, Science-Fiction</p>
                         </div>
                         <div class="col-md-6">
                             <p><strong>Acteurs:</strong></p>
                             <ul>
-                                <li>Garde nationale de l'Oklahoma</li>
-                                <li>Jordan Alex</li>
-                                <li>Jared Colson</li>
+                                <li>James McAvoy</li>
+                                <li>Michael Fassbender</li>
+                                <li>Jennifer Lawrence</li>
+                                <li>Oscar Isaac</li>
                             </ul>
                         </div>
                     </div>
@@ -536,34 +543,134 @@
             </div>
         </div>
     </div>
+
+    
+    <div class="modal fade" id="greaterModal" tabindex="-1" aria-labelledby="greaterModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="greaterModalLabel">Greater</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ratio ratio-16x9 mb-4">
+                        <iframe src="https://www.youtube.com/embed/v0Ow6lhvPNk" title="Greater Trailer" allowfullscreen></iframe>
+                    </div>
+                    <h6>Description</h6>
+                    <p>L'histoire de Brandon Burlsworth, considéré comme le plus grand walk-on (joueur non recruté) dans l'histoire du football américain universitaire.</p>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <p><strong>Réalisateur:</strong> David Hunt</p>
+                            <p><strong>Année de sortie:</strong> 2016</p>
+                            <p><strong>Genre:</strong> Biographie, Sport, Drame</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>Acteurs:</strong></p>
+                            <ul>
+                                <li>Christopher Severio</li>
+                                <li>Neal McDonough</li>
+                                <li>Leslie Easterbrook</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="lightoceansModal" tabindex="-1" aria-labelledby="lightoceansModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="lightoceansModalLabel">The Light Between Oceans</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ratio ratio-16x9 mb-4">
+                        <iframe src="https://youtu.be/Hh9fV_5iP2Q" title="The Light Between Oceans Trailer" allowfullscreen></iframe>
+                    </div>
+                    <h6>Description</h6>
+                    <p>Un gardien de phare et sa femme vivant au large des côtes de l'Australie élèvent un bébé qu'ils ont sauvé d'un canot de sauvetage à la dérive.</p>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <p><strong>Réalisateur:</strong> Derek Cianfrance</p>
+                            <p><strong>Année de sortie:</strong> 2016</p>
+                            <p><strong>Genre:</strong> Drame, Romance</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>Acteurs:</strong></p>
+                            <ul>
+                                <li>Michael Fassbender</li>
+                                <li>Alicia Vikander</li>
+                                <li>Rachel Weisz</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="bfgModal" tabindex="-1" aria-labelledby="bfgModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bfgModalLabel">The BFG</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ratio ratio-16x9 mb-4">
+                        <iframe src="https://www.youtube.com/embed/GZ0Bey4YUGI" title="The BFG Trailer" allowfullscreen></iframe>
+                    </div>
+                    <h6>Description</h6>
+                    <p>Une jeune fille orpheline se lie d'amitié avec un géant bienveillant qui l'emmène au Pays des Géants, où ils tentent d'arrêter l'invasion des géants mangeurs d'hommes.</p>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <p><strong>Réalisateur:</strong> Steven Spielberg</p>
+                            <p><strong>Année de sortie:</strong> 2016</p>
+                            <p><strong>Genre:</strong> Aventure, Famille, Fantastique</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>Acteurs:</strong></p>
+                            <ul>
+                                <li>Mark Rylance</li>
+                                <li>Ruby Barnhill</li>
+                                <li>Penelope Wilton</li>
+                                <li>Jemaine Clement</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="container">
+           <h2 class="featured-header">FEATURED MOVIES</h2> 
+        </div>
+    </section>
+
+    
+
+
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const movieItems = document.querySelectorAll('.movie-item');
-
-            movieItems.forEach(item => {
-                item.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-5px)';
-                    this.style.transition = 'transform 0.3s ease';
-                    this.style.cursor = 'pointer';
-                });
-                
-                item.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0)';
-                });
-            });
-
-            const filmMap = {
-                'Citizen Soldier': 'modal-citizen-soldier',
-                'X-Men': 'modal-xmen',
-                'Greater': 'modal-greater',
-                'Light B/t Oceans': 'modal-light-oceans',
-                'The BFG': 'modal-bfg'
-            };
-        });
-    </script>
 </body>
 
 </html>
