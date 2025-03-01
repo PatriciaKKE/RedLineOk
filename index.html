@@ -60,24 +60,10 @@
             z-index: 9999;
         }
 
-        #home {
-            position: relative;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-        }
-
         .carousel-item img {
             width: 100%;
             height: 500px;
             object-fit: cover;
-        }
-
-        .carousel-inner {
-            width: 100%;
-            height: 100vh;
-
         }
 
         .carousel-item {
@@ -238,18 +224,10 @@
             background-color: #bd081c;
         }
 
-        .card{
-            border: solid 1px grey;
-            margin-bottom: 10px;
-            padding: 0;
-            left: 100px;
-            margin-left: 100px;
-            margin-right: 200px;
-            
-        }
+        
         .gallery-container {
             padding: 20px;
-            max-width: 1300px;
+            max-width: 900px;
             margin: 0 auto;
         }
         .movie-item { 
@@ -258,10 +236,38 @@
         }
         .movie-thumbnail {
             height: 200px;
-            background-color: #4a4f55;
             margin-bottom: 10px;
             cursor: pointer;
             transition: all 0.2s ease;
+        }
+
+        .movie-thumbnail img {
+            height: 200px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .movie-thumbnail:hover {
+            opacity: 0.85;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .movie-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+        
+        .movie-title:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+        
+        .movie-year, .movie-genre {
+            display: inline-block;
+            color: #777;
+            font-size: 0.9em;
         }
         
 
@@ -326,7 +332,7 @@
                 </div>
 
                 <div class="carousel-item">
-                    <img src="image/img1.jpg" class="d-block w-100" alt="Slide 2">
+                    <img src="image/why1.jpg" class="d-block w-100" alt="Slide 2">
                 </div>
 
                 <div class="carousel-item">
@@ -420,50 +426,124 @@
     </div>
 
 
-    <div class="card">
         <div class="container gallery-container">
             <div class="row">
-                <div class="col-md-2 col-sm-4 col-6 movie-item">
-                    <div class="movie-thumbnail"></div>
+                <div class="col-md-2 col-sm-4 col-4 movie-item">
+                    <div class="movie-thumbnail "> <img src="image/img4.jpg" alt="not image"></div>
                     <div class="movie-title">Citizen Soldier</div>
                     <div class="movie-year">2016</div>
                     <div class="movie-genre">Genre</div>
                 </div>
     
                 <div class="col-md-2 col-sm-4 col-6 movie-item">
-                    <div class="movie-thumbnail"></div>
+                    <div class="movie-thumbnail"><img src="image/suit1.jpg" alt="not image"></div>
                     <div class="movie-title">X-Men</div>
                     <div class="movie-year">2016</div>
                     <div class="movie-genre">Genre</div>
                 </div>
     
-                <div class="col-md-2 col-sm-4 col-6 movie-item">
-                    <div class="movie-thumbnail"></div>
+                <div class="col-md-2 col-sm-8 col-6 movie-item">
+                    <div class="movie-thumbnail"><img src="image/why2.jpg" alt="not image"></div>
                     <div class="movie-title">Greater</div>
                     <div class="movie-year">2016</div>
                     <div class="movie-genre">Genre</div>
                 </div>
     
-                <div class="col-md-2 col-sm-4 col-6 movie-item">
-                    <div class="movie-thumbnail"></div>
+                <div class="col-md-2 col-sm-3 col-6 movie-item">
+                    <div class="movie-thumbnail"><img src="image/squid.jpg" alt="not image"></div>
                     <div class="movie-title">Light B/t Oceans</div>
                     <div class="movie-year">2016</div>
                     <div class="movie-genre">Genre</div>
                 </div>
     
                 <div class="col-md-2 col-sm-4 col-6 movie-item">
-                    <div class="movie-thumbnail"></div>
+                    <div class="movie-thumbnail"><img src="image/bfg.jpg" alt="not image"></div>
                     <div class="movie-title">The BFG</div>
                     <div class="movie-year">2016</div>
                     <div class="movie-genre">Genre</div>
                 </div>
             </div>
         </div>
+    
+<div class="modal fade" id="modal-citizen-soldier" tabindex="-1" aria-labelledby="modalCitizenSoldier" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalCitizenSoldier">Citizen Soldier</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ratio ratio-16x9 mb-4">
+                        <iframe src="https://www.youtube.com/embed/RmQL4g54vtM" title="Citizen Soldier Trailer" allowfullscreen></iframe>
+                    </div>
+                    <h6>Description</h6>
+                    <p>Un documentaire racontant les expériences au combat de la Garde nationale de l'Oklahoma durant leur déploiement en Afghanistan.</p>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <p><strong>Réalisateur:</strong> David Salzberg, Christian Tureaud</p>
+                            <p><strong>Année de sortie:</strong> 2016</p>
+                            <p><strong>Genre:</strong> Documentaire, Guerre</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>Acteurs:</strong></p>
+                            <ul>
+                                <li>Garde nationale de l'Oklahoma</li>
+                                <li>Jordan Alex</li>
+                                <li>Jared Colson</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <div class="modal fade" id="modal-citizen-soldier" tabindex="-1" aria-labelledby="modalCitizenSoldier" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalCitizenSoldier">Citizen Soldier</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ratio ratio-16x9 mb-4">
+                        <iframe src="https://www.youtube.com/embed/RmQL4g54vtM" title="Citizen Soldier Trailer" allowfullscreen></iframe>
+                    </div>
+                    <h6>Description</h6>
+                    <p>Un documentaire racontant les expériences au combat de la Garde nationale de l'Oklahoma durant leur déploiement en Afghanistan.</p>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <p><strong>Réalisateur:</strong> David Salzberg, Christian Tureaud</p>
+                            <p><strong>Année de sortie:</strong> 2016</p>
+                            <p><strong>Genre:</strong> Documentaire, Guerre</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>Acteurs:</strong></p>
+                            <ul>
+                                <li>Garde nationale de l'Oklahoma</li>
+                                <li>Jordan Alex</li>
+                                <li>Jared Colson</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const movieItems = document.querySelectorAll('.movie-item');
+        });
+    </script>
 </body>
 
 </html>
