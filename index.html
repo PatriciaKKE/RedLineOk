@@ -356,6 +356,202 @@
                 width: calc(50% - 15px);
             }
         }
+
+        .movie-slider-inner {
+            display: flex;
+            overflow: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        .slider-controls {
+            position: absolute;
+            top: -40px;
+            right: 0;
+        }
+        
+        .slider-controls button {
+            background-color: #343434;
+            color: #fff;
+            border: none;
+            width: 30px;
+            height: 30px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        
+        .slider-controls button:hover {
+            background-color: #e74c3c;
+        }
+        
+        .movie-card2 {
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s;
+            flex: 0 0 auto;
+            width: calc(25% - 10px);
+            margin-right: 10px;
+        }
+        
+        .movie-card2:hover {
+            transform: scale(1.05);
+        }
+        
+        .movie-card2 img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        .movie-info {
+            background-color: #343434;
+            padding: 8px;
+            font-size: 12px;
+        }
+        
+        .movie-price {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+        .featured-movie {
+            position: relative;
+        }
+        
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(231, 76, 60, 0.8);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        
+        .movie-details {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .contact-form {
+            background-color: #171717;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .form-control {
+            background-color: #f8f9fa;
+            border: none;
+            margin-bottom: 15px;
+        }
+        
+        .btn-danger {
+            background-color: #e74c3c;
+            border: none;
+        }
+        
+        .modal-content {
+            background-color: #343434;
+            color: #fff;
+        }
+        
+        .modal-header {
+            border-bottom: 1px solid #555;
+        }
+        
+        .modal-footer {
+            border-top: 1px solid #555;
+        }
+        
+        .map-container {
+            height: 300px;
+            margin-top: 20px;
+        }
+        
+        .footer {
+            background-color: #171717;
+            padding: 30px 0;
+            margin-top: 30px;
+        }
+        
+        .footer-title {
+            color: #e74c3c;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .footer-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .footer-list li {
+            margin-bottom: 5px;
+        }
+        
+        .footer-list a {
+            color: #aaa;
+            text-decoration: none;
+        }
+        
+        .footer-list a:hover {
+            color: #e74c3c;
+        }
+        
+        .social-icons {
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background-color: #343434;
+            color: white;
+            text-align: center;
+            line-height: 35px;
+            border-radius: 3px;
+            margin-right: 5px;
+        }
+        
+        .social-icons a:hover {
+            background-color: #e74c3c;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: #e74c3c;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            cursor: pointer;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        @media (max-width: 768px) {
+            .movie-card {
+                width: calc(50% - 10px);
+            }
+        }
     </style>
 </head>
 
@@ -899,7 +1095,382 @@
     
 
 
+    <div class="container-fluid">
+        <div class="row py-4">
+            <div class="col-12">
+                <h3 class="section-title">SHOP MOVIES</h3>
+            </div>
+            
+            <div class="col-md-8">
+                <div class="movie-slider">
+                    <div class="slider-controls">
+                        <button id="prevBtn" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+                        <button id="nextBtn" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="movie-slider-inner">
+                    
+                        <div class="movie-card2">
+                            <img src="image/bfg.jpg" alt="Rien">
+                            <div class="movie-info">
+                                <div>Swiss Army Man</div>
+                                <div>2016</div>
+                                <div class="movie-price">15 Euro</div>
+                            </div>
+                        </div>
+                    
+                        <div class="movie-card2">
+                            <img src="image/img1.jpg" alt="rien">
+                            <div class="movie-info">
+                                <div>Me Before You</div>
+                                <div>2016</div>
+                                <div class="movie-price">15 Euro</div>
+                            </div>
+                        </div>
+                        
+                        <div class="movie-card2">
+                            <img src="image/img2.jpg" alt="rien">
+                            <div class="movie-info">
+                                <div>Deadpool</div>
+                                <div>2016</div>
+                                <div class="movie-price">15 Euro</div>
+                            </div>
+                        </div>
+                        
+                        <div class="movie-card2">
+                            <img src="image/img3.jpg" alt="Rien">
+                            <div class="movie-info">
+                                <div>Rogue One</div>
+                                <div>2016</div>
+                                <div class="movie-price">15 Euro</div>
+                            </div>
+                        </div>
+                        
+                        <div class="movie-card2">
+                            <img src="image/img4.jpg" alt="rien">
+                            <div class="movie-info">
+                                <div>Storks</div>
+                                <div>2016</div>
+                                <div class="movie-price">15 Euro</div>
+                            </div>
+                        </div>
+                        
+                        <div class="movie-card2">
+                            <img src="image/soldat.jpg" alt="rien">
+                            <div class="movie-info">
+                                <div>Happiness</div>
+                                <div>2016</div>
+                                <div class="movie-price">15 Euro</div>
+                            </div>
+                        </div>
+                        
+                        <div class="movie-card2">
+                            <img src="image/squid.jpg" alt="rien">
+                            <div class="movie-info">
+                                <div>Mechanic</div>
+                                <div>2016</div>
+                                <div class="movie-price">15 Euro</div>
+                            </div>
+                        </div>
+                        
+                        <div class="movie-card2">
+                            <img src="image/suit1.jpg" alt="rien">
+                            <div class="movie-info">
+                                <div>Timeless</div>
+                                <div>2016</div>
+                                <div class="movie-price">15 Euro</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           
+        <!-- section Contact Us Section -->
+        <div class="row">
+            <div class="col-12">
+                <h3 class="section-title">CONTACT US</h3>
+            </div>
+            <div class="col-md-6">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="firstName" placeholder="FIRST NAME" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="lastName" placeholder="LAST NAME" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" id="email" placeholder="EMAIL" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="subject" placeholder="SUBJECT" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <textarea class="form-control" id="message" rows="5" placeholder="YOUR MESSAGE" required></textarea>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-danger" id="sendMessage">SEND MESSAGE</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.76457410133!2d2.2769948739612534!3d48.85894658138325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sen!2sus!4v1646666227383!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+        
+        <!-- section pour l'affichage des entrees du formulaire -->
+        <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="formModalLabel">Form Submission</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modalBody">
+                        <!-- cadre affichant les donees -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- section pour l'email -->
+        <div class="row text-center py-4">
+            <div class="col-12">
+                <h4>SUBSCRIBE TO US</h4>
+                <div class="input-group mb-3 w-50 mx-auto">
+                    <input type="text" class="form-control" placeholder="Enter your email...">
+                    <button class="btn btn-danger" type="button">SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- section pour le Footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <h5 class="footer-title">RELEASE</h5>
+                        <ul class="footer-list">
+                            <li><a href="#">2022</a></li>
+                            <li><a href="#">2021</a></li>
+                            <li><a href="#">2020</a></li>
+                            <li><a href="#">2019</a></li>
+                            <li><a href="#">2018</a></li>
+                            <li><a href="#">2017</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-md-2">
+                        <h5 class="footer-title">MOVIES</h5>
+                        <ul class="footer-list">
+                            <li><a href="#">ADVENTURE</a></li>
+                            <li><a href="#">COMEDY</a></li>
+                            <li><a href="#">FANTASY</a></li>
+                            <li><a href="#">ACTION</a></li>
+                            <li><a href="#">MOVIES</a></li>
+                            <li><a href="#">HORROR</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <h5 class="footer-title">REVIEW MOVIES</h5>
+                        <div class="row mb-2">
+                            <div class="col-6">
+                                <ul class="footer-list">
+                                    <li><a href="#">Comedy</a></li>
+                                    <li><a href="#">Horror</a></li>
+                                    <li><a href="#">Historical</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <ul class="footer-list">
+                                    <li><a href="#">Romance</a></li>
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Drama</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <ul class="footer-list">
+                                    <li><a href="#">Adventure</a></li>
+                                    <li><a href="#">Romance</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <ul class="footer-list">
+                                    <li><a href="#">Love</a></li>
+                                    <li><a href="#">Comedy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <ul class="footer-list">
+                                    <li><a href="#">Horror</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <ul class="footer-list">
+                                    <li><a href="#">Historical</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-2">
+                        <h5 class="footer-title">LATEST MOVIES</h5>
+                        <ul class="footer-list">
+                            <li><a href="#">Forrest Gump - 2015</a></li>
+                            <li><a href="#">A good day to die - 2015</a></li>
+                            <li><a href="#">Forrest Gump - 2015</a></li>
+                            <li><a href="#">A good day to die - 2015</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <h5 class="footer-title text-center">ALLEZ CINE!</h5>
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="/api/placeholder/80/100" alt="Movie" class="img-fluid mb-2">
+                            </div>
+                            <div class="col-4">
+                                <img src="/api/placeholder/80/100" alt="Movie" class="img-fluid mb-2">
+                            </div>
+                            <div class="col-4">
+                                <img src="/api/placeholder/80/100" alt="Movie" class="img-fluid mb-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row text-center mt-5">
+                    <div class="col-12">
+                        <h5>CONNECT US</h5>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // fonctionnalite pour le slide des films
+        document.addEventListener('DOMContentLoaded', function() {
+            const sliderInner = document.querySelector('.movie-slider-inner');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const cardWidth = document.querySelector('.movie-card').offsetWidth + 10; 
+            const visibleCards = 4;
+            const scrollAmount = cardWidth * visibleCards;
+            
+            prevBtn.addEventListener('click', function() {
+                sliderInner.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+            
+            nextBtn.addEventListener('click', function() {
+                sliderInner.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // soumission du formulaire de contact
+            const contactForm = document.getElementById('contactForm');
+            const formModal = new bootstrap.Modal(document.getElementById('formModal'));
+            const modalBody = document.getElementById('modalBody');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Obtenir les valeurs du formulaire
+                const firstName = document.getElementById('firstName').value;
+                const lastName = document.getElementById('lastName').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+                
+                // affichage des modales
+                modalBody.innerHTML = `
+                    <p><strong>First Name:</strong> ${firstName}</p>
+                    <p><strong>Last Name:</strong> ${lastName}</p>
+                    <p><strong>Email:</strong> ${email}</p>
+                    <p><strong>Subject:</strong> ${subject}</p>
+                    <p><strong>Message:</strong> ${message}</p>
+                `;
+                
+                // visualisation des modales
+                formModal.show();
+                
+                //renitialisation du formulaire
+                contactForm.reset();
+            });
+            
+            // Création du bouton Retour en haut
+            function createBackToTopButton() {
+                // Création de l'élément de bouton
+                const backToTopBtn = document.createElement('div');
+                
+                // Création de l'élément de l'icône
+                const icon = document.createElement('i');
+                icon.className = 'fas fa-arrow-up';
+                
+                // Ajout de l'icône au bouton
+                backToTopBtn.appendChild(icon);
+                
+                // Ajout d'une classe au bouton
+                backToTopBtn.className = 'back-to-top';
+                
+                // Ajout d'un écouteur d'événement de clic
+                backToTopBtn.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+                
+                // Ajout du bouton au corps
+                document.body.appendChild(backToTopBtn);
+                
+                // Affichage et masquage du bouton 
+                window.addEventListener('scroll', function() {
+                    const scrollPosition = window.scrollY;
+                    const headerHeight = document.getElementById('header').offsetHeight;
+                    
+                    if (scrollPosition > headerHeight) {
+                        backToTopBtn.style.opacity = '1';
+                    } else {
+                        backToTopBtn.style.opacity = '0';
+                    }
+                });
+            }
 
+            createBackToTopButton();
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
