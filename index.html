@@ -1337,7 +1337,7 @@
             movieListContainer.innerHTML = '';
             
             const endIndex = Math.min(currentStartIndex + moviesPerPage, movies.length);
-        }
+        
 
         for (let i = currentStartIndex; i < endIndex; i++) {
                 const movie = movies[i];
@@ -1354,6 +1354,12 @@
                 const card = movieCard.querySelector('.movie-card');
                 card.addEventListener('click', () => showMovieDetail(movie.id));
             }
+        }
+
+        function showMovieDetail(movieId) {
+            
+        }
+
 
     </script>
 
