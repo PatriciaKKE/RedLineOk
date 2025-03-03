@@ -1366,9 +1366,31 @@
             document.getElementById('detail-release').textContent = movie.year;
             document.getElementById('detail-genres').textContent = movie.genres;
             document.getElementById('detail-price').textContent = movie.price;
-            
 
+            document.getElementById('movie-detail').classList.remove('d-none');
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderMovies();
+            
+            document.getElementById('prev-btn').addEventListener('click', () => {
+                if (currentStartIndex > 0) {
+                    currentStartIndex -= moviesPerPage;
+                    renderMovies();
+                }
+            });
+            
+            document.getElementById('next-btn').addEventListener('click', () => {
+                if (currentStartIndex + moviesPerPage < movies.length) {
+                    currentStartIndex += moviesPerPage;
+                    renderMovies();
+                }
+            });
+            
+            if (movies.length > 0) {
+                showMovieDetail(movies[0].id);
+            }
+        });
 
 
     </script>
