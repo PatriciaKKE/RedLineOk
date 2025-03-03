@@ -357,6 +357,16 @@
             }
         }
 
+
+        .titre{
+            border-left: 4px solid #fe4240;
+            padding-left: 130px;
+            margin-bottom: 20px;
+        }
+        .movie-slider {
+            position: relative;
+            margin-bottom: 30px;
+        }
         .movie-slider-inner {
             display: flex;
             overflow: hidden;
@@ -670,22 +680,22 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <script>
+                    <script> /*script pour la verification de l'age*/
                         function checkAge() {
-                            const dob = document.getElementById('dob').value;
-                            if (!dob) return alert("Veuillez entrer votre date de naissance");
+                            const dob = document.getElementById('dob').value;/*recupere la date de naissance entree par l'utilisateur*/
+                            if (!dob) return alert("Veuillez entrer votre date de naissance");/*condition de verification si la date de naissance a ete saisit*/
 
-                            const birthDate = new Date(dob);
-                            const today = new Date();
-                            let age = today.getFullYear() - birthDate.getFullYear();
-                            const monthDiff = today.getMonth() - birthDate.getMonth();
+                            const birthDate = new Date(dob); /* Convertit la date saisi (dob, une chaîne) en un objet DateJeunes birthDate*/
+                            const today = new Date();/*Crée un objet Date (date et l'heure actuelles) today*/
+                            let age = today.getFullYear() - birthDate.getFullYear(); /*recupere l'annee actuelle et l'annee de l'utilisateur et calcul l'age en fonction de ses annees*/
+                            const monthDiff = today.getMonth() - birthDate.getMonth(); /*recuperation du mois actuelle et du mois de naissance et calcule de la difference en fonction des mois*/
                             if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-                                age--;
+                                age--;/*(le mois de naissance est après le mois actuel), et que le jour actuel est inférieur au jour de naissance*/
                             }
 
                             if (age >= 18) {
-                                document.getElementById('age-verification').style.display = 'none';
-                                document.getElementById('main-content').style.display = 'block';
+                                document.getElementById('age-verification').style.display = 'none';/*permet de cacher la section d'age*/
+                                document.getElementById('main-content').style.display = 'block';/*Affiche le contenu principal (id="main-content")*/
                             } else {
                                 alert("Vous devez avoir au moins 18 ans pour accéder à ce site. Vous serez redirigé vers IMDB.");
                                 window.location.href = "https://www.imdb.com";
@@ -988,10 +998,11 @@
     </section>
 
     <script>
-        document.querySelectorAll('.filter-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                let filter = this.getAttribute('data-filter');
-                document.querySelectorAll('.movie-card').forEach(movie => {
+        document.querySelectorAll('.filter-btn').forEach(button => { /*Sélectionne tous les éléments qui ont la classe .filter-btn (des boutons de filtrage).forEach(button => { ... }) : Boucle tous sur bouton sélectionné pour lui ajouter un gestionnaire d'événement*/
+            button.addEventListener('click', function() { /*Attache un gestionnaire d'événement click à notre bouton de filtrage.*/
+                let filter = this.getAttribute('data-filter');/*récupère la valeur de l'attribut data-filter du bouton*/
+                document.querySelectorAll('.movie-card').forEach(movie => {/*Sélectionne Toutes les cartes de films*/
+                    
                     if (filter === 'all' || movie.classList.contains(filter)) {
                         movie.classList.add('visible');
                     } else {
@@ -1001,13 +1012,14 @@
             });
         });
         
-        document.getElementById('toggle-movies').addEventListener('click', function() {
-            let extraMovies = document.querySelectorAll('.movie-card.extra');
+        document.getElementById('toggle-movies').addEventListener('click', function() {/*Sélectionne le bouton qui a l'id="toggle-movies". Exécute une action lorsqu'on clique sur ce bouton.*/
+            let extraMovies = document.querySelectorAll('.movie-card.extra');/*Sélectionne Toutes les cartes de films qui ont la classe .extra (films cachés par défaut)*/
+            /*Alternance entre l'écran et le masquage des films supplémentaires*/
             if (this.textContent === 'Plus des films') {
-                extraMovies.forEach(movie => movie.classList.add('visible'));
-                this.textContent = 'Moins des films';
+                extraMovies.forEach(movie => movie.classList.add('visible'));/*Ajoute visibleà notre film supplémentaire pour les afficher.*/
+                this.textContent = 'Moins des films';/*Changer le texte du bouton en "Moins des films", indiquant que l'utilisateur peut maintenant masquer ces films.*/
             } else {
-                extraMovies.forEach(movie => movie.classList.remove('visible'));
+                extraMovies.forEach(movie => movie.classList.remove('visible'));/*Supprime la classe visiblepour masquer les films*/
                 this.textContent = 'Plus des films';
             }
         });
@@ -1068,9 +1080,9 @@
 
 
     <script>
-        document.querySelectorAll('.filter-btn').forEach(button => {
+        document.querySelectorAll('.filter-btn').forEach(button => {/* Boucle sur bouton pour lui ajouter un gestionnaire d'événement.*/
             button.addEventListener('click', function() {
-                let filter = this.getAttribute('data-filter');
+                let filter = this.getAttribute('data-filter');/*récupère la valeur de la valeur de data-filterdu bouton cliqué.*/
                 document.querySelectorAll('.movie-card1').forEach(movie => {
                     if (filter === 'all' || movie.classList.contains(filter)) {
                         movie.classList.add('visible1');
@@ -1097,9 +1109,7 @@
 
     <div class="container-fluid">
         <div class="row py-4">
-            <div class="col-12">
-                <h3 class="section-title">SHOP MOVIES</h3>
-            </div>
+            <h3 class="titre">SHOP MOVIES</h3>
             
             <div class="col-md-8">
                 <div class="movie-slider">
@@ -1343,16 +1353,16 @@
                     </div>
                     
                     <div class="col-md-3">
-                        <h5 class="footer-title text-center">ALLEZ CINE!</h5>
+                        <h5 class="footer-title text-center">ALLEZ-CINE!</h5>
                         <div class="row">
                             <div class="col-4">
-                                <img src="/api/placeholder/80/100" alt="Movie" class="img-fluid mb-2">
+                                <img src="image/bfg.jpg" alt="Movie" class="img-fluid mb-2">
                             </div>
                             <div class="col-4">
-                                <img src="/api/placeholder/80/100" alt="Movie" class="img-fluid mb-2">
+                                <img src="image/conclave.webp" alt="Movie" class="img-fluid mb-2">
                             </div>
                             <div class="col-4">
-                                <img src="/api/placeholder/80/100" alt="Movie" class="img-fluid mb-2">
+                                <img src="image/gladiator.webp" alt="Movie" class="img-fluid mb-2">
                             </div>
                         </div>
                     </div>
