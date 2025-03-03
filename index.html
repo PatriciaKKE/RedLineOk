@@ -372,73 +372,37 @@
         }
 
 
-        .titre {
-            border-left: 4px solid #fe4240;
-            padding-left: 130px;
-            margin-bottom: 20px;
-        }
-
-        .movie-slider {
-            position: relative;
-            margin-bottom: 30px;
-        }
-
-        .movie-slider-inner {
-            display: flex;
-            overflow: hidden;
-            scroll-behavior: smooth;
-        }
-
-        .slider-controls {
-            position: absolute;
-            top: -40px;
-            right: 0;
-        }
-
-        .slider-controls button {
-            background-color: #343434;
-            color: #fff;
-            border: none;
-            width: 30px;
-            height: 30px;
-            margin-left: 5px;
-            cursor: pointer;
-        }
-
-        .slider-controls button:hover {
-            background-color: #e74c3c;
-        }
-
         .movie-card2 {
-            margin-bottom: 20px;
             position: relative;
-            overflow: hidden;
+            transition: transform 0.3s;
+            margin-bottom: 20px;
             cursor: pointer;
-            transition: all 0.3s;
-            flex: 0 0 auto;
-            width: calc(25% - 10px);
-            margin-right: 10px;
+            height: 100%;
+            background-color: #343a40;
+            color: white;
         }
 
         .movie-card2:hover {
-            transform: scale(1.05);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
         .movie-card2 img {
             width: 100%;
-            height: 150px;
+            height: 200px;
             object-fit: cover;
         }
 
-        .movie-info {
-            background-color: #343434;
-            padding: 8px;
-            font-size: 12px;
+        .movie-title {
+            font-size: 1rem;
+            padding: 10px;
+            margin: 0;
         }
 
         .movie-price {
-            color: #e74c3c;
+            color: #ff4d4d;
             font-weight: bold;
+            padding: 0 10px 10px;
         }
 
         .movie-detail {
@@ -447,36 +411,43 @@
             height: 100%;
             position: relative;
         }
+
         .movie-detail-content {
             padding: 15px;
         }
+
         .movie-detail img {
             width: 100%;
             height: auto;
         }
+
         .movie-detail h2 {
             color: white;
             margin-top: 15px;
         }
+
         .movie-detail p {
             margin-bottom: 5px;
         }
+
         .movie-detail .price {
             color: #ff4d4d;
             font-weight: bold;
             font-size: 1.2rem;
         }
 
-        .featured-movie {
-            position: relative;
+        .detail-section {
+            margin-top: 10px;
+            border-top: 1px solid #333;
+            padding-top: 10px;
         }
 
-        .play-button {
+        .play-btn {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: rgba(231, 76, 60, 0.8);
+            background-color: rgba(255, 77, 77, 0.7);
             width: 60px;
             height: 60px;
             border-radius: 50%;
@@ -485,15 +456,34 @@
             align-items: center;
             color: white;
             font-size: 24px;
+            cursor: pointer;
         }
 
-        .movie-details {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 15px;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
+        .navigation-arrows {
+            text-align: right;
+            margin-bottom: 20px;
         }
+
+        .navigation-arrows button {
+            background-color: #343a40;
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 767px) {
+            .movie-detail {
+                margin-top: 20px;
+            }
+        }
+
+        .featured-movie {
+            position: relative;
+        }
+
 
         .contact-form {
             background-color: #171717;
@@ -1166,7 +1156,7 @@
         });
     </script>
 
-
+    <div class="container mt-4">
         <div class="d-flex justify-content-between align-items-center">
             <h1>SHOP MOVIES</h1>
             <div class="navigation-arrows">
@@ -1175,103 +1165,106 @@
             </div>
         </div>
 
-        <div class="movie-slider-inner">
-            <div class="movie-card2">
-                <img src="image/bfg.jpg" alt="Rien">
-                <div class="movie-info">
-                    <div>Swiss Army Man</div>
-                    <div>2016</div>
-                    <div class="movie-price">15 Euro</div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row" id="movie-list">
+                    <div class="movie-card2">
+                        <img src="image/bfg.jpg" alt="Rien">
+                    </div>
+
+                    <div class="movie-card2">
+                        <img src="image/img1.jpg" alt="rien">
+                        <div class="movie-info">
+                            <div>Me Before You</div>
+                            <div>2016</div>
+                            <div class="movie-price">15 Euro</div>
+                        </div>
+                    </div>
+
+                    <div class="movie-card2">
+                        <img src="image/img2.jpg" alt="rien">
+                        <div class="movie-info">
+                            <div>Deadpool</div>
+                            <div>2016</div>
+                            <div class="movie-price">15 Euro</div>
+                        </div>
+                    </div>
+
+                    <div class="movie-card2">
+                        <img src="image/img3.jpg" alt="Rien">
+                        <div class="movie-info">
+                            <div>Rogue One</div>
+                            <div>2016</div>
+                            <div class="movie-price">15 Euro</div>
+                        </div>
+                    </div>
+
+                    <div class="movie-card2">
+                        <img src="image/img4.jpg" alt="rien">
+                        <div class="movie-info">
+                            <div>Storks</div>
+                            <div>2016</div>
+                            <div class="movie-price">15 Euro</div>
+                        </div>
+                    </div>
+
+                    <div class="movie-card2">
+                        <img src="image/soldat.jpg" alt="rien">
+                        <div class="movie-info">
+                            <div>Happiness</div>
+                            <div>2016</div>
+                            <div class="movie-price">15 Euro</div>
+                        </div>
+                    </div>
+
+                    <div class="movie-card2">
+                        <img src="image/squid.jpg" alt="rien">
+                        <div class="movie-info">
+                            <div>Mechanic</div>
+                            <div>2016</div>
+                            <div class="movie-price">15 Euro</div>
+                        </div>
+                    </div>
+
+                    <div class="movie-card2">
+                        <img src="image/suit1.jpg" alt="rien">
+                        <div class="movie-info">
+                            <div>Timeless</div>
+                            <div>2016</div>
+                            <div class="movie-price">15 Euro</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="movie-card2">
-                <img src="image/img1.jpg" alt="rien">
-                <div class="movie-info">
-                    <div>Me Before You</div>
-                    <div>2016</div>
-                    <div class="movie-price">15 Euro</div>
-                </div>
-            </div>
 
-            <div class="movie-card2">
-                <img src="image/img2.jpg" alt="rien">
-                <div class="movie-info">
-                    <div>Deadpool</div>
-                    <div>2016</div>
-                    <div class="movie-price">15 Euro</div>
-                </div>
-            </div>
 
-            <div class="movie-card2">
-                <img src="image/img3.jpg" alt="Rien">
-                <div class="movie-info">
-                    <div>Rogue One</div>
-                    <div>2016</div>
-                    <div class="movie-price">15 Euro</div>
-                </div>
-            </div>
+            <div class="col-md-4" id="movie-detail-container">
+                <div class="movie-detail d-none" id="movie-detail">
+                    <div class="position-relative">
+                        <img id="detail-image" src="" alt="Movie Poster">
+                        <div class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="movie-detail-content">
+                        <h2 id="detail-title">Movie Title</h2>
 
-            <div class="movie-card2">
-                <img src="image/img4.jpg" alt="rien">
-                <div class="movie-info">
-                    <div>Storks</div>
-                    <div>2016</div>
-                    <div class="movie-price">15 Euro</div>
-                </div>
-            </div>
+                        <div class="detail-section">
+                            <p id="detail-story">Story line:</p>
+                        </div>
 
-            <div class="movie-card2">
-                <img src="image/soldat.jpg" alt="rien">
-                <div class="movie-info">
-                    <div>Happiness</div>
-                    <div>2016</div>
-                    <div class="movie-price">15 Euro</div>
-                </div>
-            </div>
-
-            <div class="movie-card2">
-                <img src="image/squid.jpg" alt="rien">
-                <div class="movie-info">
-                    <div>Mechanic</div>
-                    <div>2016</div>
-                    <div class="movie-price">15 Euro</div>
-                </div>
-            </div>
-
-            <div class="movie-card2">
-                <img src="image/suit1.jpg" alt="rien">
-                <div class="movie-info">
-                    <div>Timeless</div>
-                    <div>2016</div>
-                    <div class="movie-price">15 Euro</div>
+                        <div class="detail-section">
+                            <p>Release On: <span id="detail-release">Date</span></p>
+                            <p>Genres: <span id="detail-genres">Genre</span></p>
+                            <p class="price">Price: <span id="detail-price">15 Euro</span></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="col-md-4" id="movie-detail-container">
-            <div class="movie-detail d-none" id="movie-detail">
-                <div class="position-relative">
-                    <img id="detail-image" src="" alt="Movie Poster">
-                    <div class="play-btn">
-                        <i class="fas fa-play"></i>
-                    </div>
-                </div>
-                <div class="movie-detail-content">
-                    <h2 id="detail-title">Movie Title</h2>
-                    
-                    <div class="detail-section">
-                        <p id="detail-story">Story line:</p>
-                    </div>
-                    
-                    <div class="detail-section">
-                        <p>Release On: <span id="detail-release">Date</span></p>
-                        <p>Genres: <span id="detail-genres">Genre</span></p>
-                        <p class="price">Price: <span id="detail-price">15 Euro</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
+    </div>
     </div>
     </div>
 
@@ -1286,7 +1279,7 @@
                 genres: "Drama | Thriller | Action",
                 story: "Hundreds of cash-strapped players accept a strange invitation to compete in children's games. Inside, a tempting prize awaits — with deadly high stakes."
             },
-                        {
+            {
                 id: 2,
                 title: "Capitain america",
                 image: "/api/placeholder/400/320",
@@ -1357,11 +1350,11 @@
         function renderMovies() {
             const movieListContainer = document.getElementById('movie-list');
             movieListContainer.innerHTML = '';
-            
-            const endIndex = Math.min(currentStartIndex + moviesPerPage, movies.length);
-        
 
-        for (let i = currentStartIndex; i < endIndex; i++) {
+            const endIndex = Math.min(currentStartIndex + moviesPerPage, movies.length);
+
+
+            for (let i = currentStartIndex; i < endIndex; i++) {
                 const movie = movies[i];
                 const movieCard = document.createElement('div');
                 movieCard.className = 'col-md-3 col-sm-6';
@@ -1394,21 +1387,21 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             renderMovies();
-            
+
             document.getElementById('prev-btn').addEventListener('click', () => {
                 if (currentStartIndex > 0) {
                     currentStartIndex -= moviesPerPage;
                     renderMovies();
                 }
             });
-            
+
             document.getElementById('next-btn').addEventListener('click', () => {
                 if (currentStartIndex + moviesPerPage < movies.length) {
                     currentStartIndex += moviesPerPage;
                     renderMovies();
                 }
             });
-            
+
             if (movies.length > 0) {
                 showMovieDetail(movies[0].id);
             }
