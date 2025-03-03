@@ -282,6 +282,7 @@
             padding-left: 10px;
             margin-bottom: 20px;
         }
+
         .movie-card {
             display: none;
             background-color: #ddd;
@@ -292,25 +293,31 @@
             padding-top: 200px;
             font-weight: bold;
         }
+
         .visible {
             display: block;
         }
+
         .genre-filters button {
             margin-right: 5px;
         }
+
         #movies-container {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
         }
+
         .movie-card-container {
             width: calc(16.66% - 15px);
         }
+
         @media (max-width: 992px) {
             .movie-card-container {
                 width: calc(33.33% - 15px);
             }
         }
+
         @media (max-width: 768px) {
             .movie-card-container {
                 width: calc(50% - 15px);
@@ -322,6 +329,7 @@
             padding-left: 10px;
             margin-bottom: 20px;
         }
+
         .movie-card1 {
             display: none;
             background-color: #ddd;
@@ -332,25 +340,31 @@
             padding-top: 200px;
             font-weight: bold;
         }
+
         .visible1 {
             display: block;
         }
+
         .genre-filters-movies button {
             margin-right: 5px;
         }
+
         #movies-container1 {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
         }
+
         .movie-card-container1 {
             width: calc(16.66% - 15px);
         }
+
         @media (max-width: 992px) {
             .movie-card-container1 {
                 width: calc(33.33% - 15px);
             }
         }
+
         @media (max-width: 768px) {
             .movie-card-container1 {
                 width: calc(50% - 15px);
@@ -358,27 +372,29 @@
         }
 
 
-        .titre{
+        .titre {
             border-left: 4px solid #fe4240;
             padding-left: 130px;
             margin-bottom: 20px;
         }
+
         .movie-slider {
             position: relative;
             margin-bottom: 30px;
         }
+
         .movie-slider-inner {
             display: flex;
             overflow: hidden;
             scroll-behavior: smooth;
         }
-        
+
         .slider-controls {
             position: absolute;
             top: -40px;
             right: 0;
         }
-        
+
         .slider-controls button {
             background-color: #343434;
             color: #fff;
@@ -388,11 +404,11 @@
             margin-left: 5px;
             cursor: pointer;
         }
-        
+
         .slider-controls button:hover {
             background-color: #e74c3c;
         }
-        
+
         .movie-card2 {
             margin-bottom: 20px;
             position: relative;
@@ -403,32 +419,32 @@
             width: calc(25% - 10px);
             margin-right: 10px;
         }
-        
+
         .movie-card2:hover {
             transform: scale(1.05);
         }
-        
+
         .movie-card2 img {
             width: 100%;
             height: 150px;
             object-fit: cover;
         }
-        
+
         .movie-info {
             background-color: #343434;
             padding: 8px;
             font-size: 12px;
         }
-        
+
         .movie-price {
             color: #e74c3c;
             font-weight: bold;
         }
-        
+
         .featured-movie {
             position: relative;
         }
-        
+
         .play-button {
             position: absolute;
             top: 50%;
@@ -444,7 +460,7 @@
             color: white;
             font-size: 24px;
         }
-        
+
         .movie-details {
             background-color: rgba(0, 0, 0, 0.7);
             padding: 15px;
@@ -452,76 +468,76 @@
             bottom: 0;
             width: 100%;
         }
-        
+
         .contact-form {
             background-color: #171717;
             padding: 20px;
             margin: 20px 0;
         }
-        
+
         .form-control {
             background-color: #f8f9fa;
             border: none;
             margin-bottom: 15px;
         }
-        
+
         .btn-danger {
             background-color: #e74c3c;
             border: none;
         }
-        
+
         .modal-content {
             background-color: #343434;
             color: #fff;
         }
-        
+
         .modal-header {
             border-bottom: 1px solid #555;
         }
-        
+
         .modal-footer {
             border-top: 1px solid #555;
         }
-        
+
         .map-container {
             height: 300px;
             margin-top: 20px;
         }
-        
+
         .footer {
             background-color: #171717;
             padding: 30px 0;
             margin-top: 30px;
         }
-        
+
         .footer-title {
             color: #e74c3c;
             margin-bottom: 15px;
             font-weight: bold;
         }
-        
+
         .footer-list {
             list-style: none;
             padding-left: 0;
         }
-        
+
         .footer-list li {
             margin-bottom: 5px;
         }
-        
+
         .footer-list a {
             color: #aaa;
             text-decoration: none;
         }
-        
+
         .footer-list a:hover {
             color: #e74c3c;
         }
-        
+
         .social-icons {
             margin-top: 20px;
         }
-        
+
         .social-icons a {
             display: inline-block;
             width: 35px;
@@ -533,11 +549,11 @@
             border-radius: 3px;
             margin-right: 5px;
         }
-        
+
         .social-icons a:hover {
             background-color: #e74c3c;
         }
-        
+
         .back-to-top {
             position: fixed;
             bottom: 20px;
@@ -556,7 +572,7 @@
             opacity: 0;
             transition: opacity 0.3s;
         }
-        
+
         @media (max-width: 768px) {
             .movie-card {
                 width: calc(50% - 10px);
@@ -706,7 +722,7 @@
             </div>
         </div>
     </div>
-    
+
 
 
     <div class="social-buttons">
@@ -720,35 +736,42 @@
     <div class="container gallery-container">
         <div class="row">
             <div class="col-md-3 col-sm-4 col-6 movie-item">
-                <div class="movie-thumbnail" data-bs-toggle="modal" data-bs-target="#citizenSoldierModal"><img src="image/img3.jpg"></div>
-                <div class="movie-title" data-bs-toggle="modal" data-bs-target="#citizenSoldierModal">Citizen Soldier</div>
+                <div class="movie-thumbnail" data-bs-toggle="modal" data-bs-target="#citizenSoldierModal"><img
+                        src="image/img3.jpg"></div>
+                <div class="movie-title" data-bs-toggle="modal" data-bs-target="#citizenSoldierModal">Citizen Soldier
+                </div>
                 <div class="movie-year">2016</div>
                 <div class="movie-genre">Genre</div>
             </div>
-        
+
             <div class="col-md-2 col-sm-4 col-6 movie-item">
-                <div class="movie-thumbnail" data-bs-toggle="modal" data-bs-target="#xmenModal"><img src="image/suit1.jpg"></div>
+                <div class="movie-thumbnail" data-bs-toggle="modal" data-bs-target="#xmenModal"><img
+                        src="image/suit1.jpg"></div>
                 <div class="movie-title" data-bs-toggle="modal" data-bs-target="#xmenModal">X-Men</div>
                 <div class="movie-year">2016</div>
                 <div class="movie-genre">Genre</div>
             </div>
-            
+
             <div class="col-md-3 col-sm-4 col-6 movie-item">
-                <div class="movie-thumbnail" data-bs-toggle="modal" data-bs-target="#greaterModal"><img src="image/why2.jpg"></div>
+                <div class="movie-thumbnail" data-bs-toggle="modal" data-bs-target="#greaterModal"><img
+                        src="image/why2.jpg"></div>
                 <div class="movie-title" data-bs-toggle="modal" data-bs-target="#greaterModal">Greater</div>
                 <div class="movie-year">2016</div>
                 <div class="movie-genre">Genre</div>
             </div>
-            
+
             <div class="col-md-2 col-sm-4 col-6 movie-item">
-                <div class="movie-thumbnail" data-bs-toggle="modal" data-bs-target="#lightoceansModal"><img src="image/img4.jpg"></div>
-                <div class="movie-title" data-bs-toggle="modal" data-bs-target="#lightoceansModal">Light B/t Oceans</div>
+                <div class="movie-thumbnail" data-bs-toggle="modal" data-bs-target="#lightoceansModal"><img
+                        src="image/img4.jpg"></div>
+                <div class="movie-title" data-bs-toggle="modal" data-bs-target="#lightoceansModal">Light B/t Oceans
+                </div>
                 <div class="movie-year">2016</div>
                 <div class="movie-genre">Genre</div>
             </div>
-            
+
             <div class="col-md-2 col-sm-4 col-6 movie-item">
-                <div class="movie-thumbnail" data-bs-toggle="modal" data-bs-target="#bfgModal"><img src="image/bfg.jpg"></div>
+                <div class="movie-thumbnail" data-bs-toggle="modal" data-bs-target="#bfgModal"><img src="image/bfg.jpg">
+                </div>
                 <div class="movie-title" data-bs-toggle="modal" data-bs-target="#bfgModal">The BFG</div>
                 <div class="movie-year">2016</div>
                 <div class="movie-genre">Genre</div>
@@ -757,7 +780,8 @@
     </div>
 
 
-    <div class="modal fade" id="citizenSoldierModal" tabindex="-1" aria-labelledby="citizenSoldierModalLabel" aria-hidden="true">
+    <div class="modal fade" id="citizenSoldierModal" tabindex="-1" aria-labelledby="citizenSoldierModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -766,10 +790,12 @@
                 </div>
                 <div class="modal-body">
                     <div class="ratio ratio-16x9 mb-4">
-                        <iframe src="https://www.youtube.com/embed/RmQL4g54vtM" title="Citizen Soldier Trailer" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/RmQL4g54vtM" title="Citizen Soldier Trailer"
+                            allowfullscreen></iframe>
                     </div>
                     <h6>Description</h6>
-                    <p>Un documentaire racontant les expériences au combat de la Garde nationale de l'Oklahoma durant leur déploiement en Afghanistan.</p>
+                    <p>Un documentaire racontant les expériences au combat de la Garde nationale de l'Oklahoma durant
+                        leur déploiement en Afghanistan.</p>
                     <div class="row mt-3">
                         <div class="col-md-6">
                             <p><strong>Réalisateur:</strong> David Salzberg, Christian Tureaud</p>
@@ -793,7 +819,7 @@
         </div>
     </div>
 
-    
+
     <div class="modal fade" id="xmenModal" tabindex="-1" aria-labelledby="xmenModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -803,10 +829,12 @@
                 </div>
                 <div class="modal-body">
                     <div class="ratio ratio-16x9 mb-4">
-                        <iframe src="https://www.youtube.com/embed/COvnHv42T-A" title="X-Men: Apocalypse Trailer" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/COvnHv42T-A" title="X-Men: Apocalypse Trailer"
+                            allowfullscreen></iframe>
                     </div>
                     <h6>Description</h6>
-                    <p>Après la réémergence du premier et plus puissant mutant au monde, Apocalypse, les X-Men doivent s'unir pour vaincre ses plans d'extinction.</p>
+                    <p>Après la réémergence du premier et plus puissant mutant au monde, Apocalypse, les X-Men doivent
+                        s'unir pour vaincre ses plans d'extinction.</p>
                     <div class="row mt-3">
                         <div class="col-md-6">
                             <p><strong>Réalisateur:</strong> Bryan Singer</p>
@@ -831,7 +859,7 @@
         </div>
     </div>
 
-    
+
     <div class="modal fade" id="greaterModal" tabindex="-1" aria-labelledby="greaterModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -841,10 +869,12 @@
                 </div>
                 <div class="modal-body">
                     <div class="ratio ratio-16x9 mb-4">
-                        <iframe src="https://www.youtube.com/embed/v0Ow6lhvPNk" title="Greater Trailer" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/v0Ow6lhvPNk" title="Greater Trailer"
+                            allowfullscreen></iframe>
                     </div>
                     <h6>Description</h6>
-                    <p>L'histoire de Brandon Burlsworth, considéré comme le plus grand walk-on (joueur non recruté) dans l'histoire du football américain universitaire.</p>
+                    <p>L'histoire de Brandon Burlsworth, considéré comme le plus grand walk-on (joueur non recruté) dans
+                        l'histoire du football américain universitaire.</p>
                     <div class="row mt-3">
                         <div class="col-md-6">
                             <p><strong>Réalisateur:</strong> David Hunt</p>
@@ -869,7 +899,8 @@
     </div>
 
 
-    <div class="modal fade" id="lightoceansModal" tabindex="-1" aria-labelledby="lightoceansModalLabel" aria-hidden="true">
+    <div class="modal fade" id="lightoceansModal" tabindex="-1" aria-labelledby="lightoceansModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -878,10 +909,12 @@
                 </div>
                 <div class="modal-body">
                     <div class="ratio ratio-16x9 mb-4">
-                        <iframe src="https://youtu.be/Hh9fV_5iP2Q" title="The Light Between Oceans Trailer" allowfullscreen></iframe>
+                        <iframe src="https://youtu.be/Hh9fV_5iP2Q" title="The Light Between Oceans Trailer"
+                            allowfullscreen></iframe>
                     </div>
                     <h6>Description</h6>
-                    <p>Un gardien de phare et sa femme vivant au large des côtes de l'Australie élèvent un bébé qu'ils ont sauvé d'un canot de sauvetage à la dérive.</p>
+                    <p>Un gardien de phare et sa femme vivant au large des côtes de l'Australie élèvent un bébé qu'ils
+                        ont sauvé d'un canot de sauvetage à la dérive.</p>
                     <div class="row mt-3">
                         <div class="col-md-6">
                             <p><strong>Réalisateur:</strong> Derek Cianfrance</p>
@@ -915,10 +948,12 @@
                 </div>
                 <div class="modal-body">
                     <div class="ratio ratio-16x9 mb-4">
-                        <iframe src="https://www.youtube.com/embed/GZ0Bey4YUGI" title="The BFG Trailer" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/GZ0Bey4YUGI" title="The BFG Trailer"
+                            allowfullscreen></iframe>
                     </div>
                     <h6>Description</h6>
-                    <p>Une jeune fille orpheline se lie d'amitié avec un géant bienveillant qui l'emmène au Pays des Géants, où ils tentent d'arrêter l'invasion des géants mangeurs d'hommes.</p>
+                    <p>Une jeune fille orpheline se lie d'amitié avec un géant bienveillant qui l'emmène au Pays des
+                        Géants, où ils tentent d'arrêter l'invasion des géants mangeurs d'hommes.</p>
                     <div class="row mt-3">
                         <div class="col-md-6">
                             <p><strong>Réalisateur:</strong> Steven Spielberg</p>
@@ -946,8 +981,8 @@
 
     <section>
         <div class="container mt-4">
-           <h2 class="featured-header">FEATURED MOVIES</h2> 
-           <div class="genre-filters mb-4">
+            <h2 class="featured-header">FEATURED MOVIES</h2>
+            <div class="genre-filters mb-4">
                 <button class="btn btn-danger filter-btn" data-filter="all">All</button>
                 <button class="btn btn-outline-danger filter-btn" data-filter="action">Actions</button>
                 <button class="btn btn-outline-danger filter-btn" data-filter="comedy">Policier</button>
@@ -972,7 +1007,7 @@
                 <div class="movie-card-container">
                     <div class="movie-card action visible">ISRA 88 (2016)</div>
                 </div>
-                
+
                 <div class="movie-card-container">
                     <div class="movie-card action extra">War Dogs (2016)</div>
                 </div>
@@ -992,17 +1027,17 @@
                     <div class="movie-card policier extra">Assassin's Creed 3 (2016)</div>
                 </div>
             </div>
-            
+
             <button class="btn btn-danger mt-3" id="toggle-movies">Plus des films</button>
         </div>
     </section>
 
     <script>
         document.querySelectorAll('.filter-btn').forEach(button => { /*Sélectionne tous les éléments qui ont la classe .filter-btn (des boutons de filtrage).forEach(button => { ... }) : Boucle tous sur bouton sélectionné pour lui ajouter un gestionnaire d'événement*/
-            button.addEventListener('click', function() { /*Attache un gestionnaire d'événement click à notre bouton de filtrage.*/
+            button.addEventListener('click', function () { /*Attache un gestionnaire d'événement click à notre bouton de filtrage.*/
                 let filter = this.getAttribute('data-filter');/*récupère la valeur de l'attribut data-filter du bouton*/
                 document.querySelectorAll('.movie-card').forEach(movie => {/*Sélectionne Toutes les cartes de films*/
-                    
+
                     if (filter === 'all' || movie.classList.contains(filter)) {
                         movie.classList.add('visible');
                     } else {
@@ -1011,8 +1046,8 @@
                 });
             });
         });
-        
-        document.getElementById('toggle-movies').addEventListener('click', function() {/*Sélectionne le bouton qui a l'id="toggle-movies". Exécute une action lorsqu'on clique sur ce bouton.*/
+
+        document.getElementById('toggle-movies').addEventListener('click', function () {/*Sélectionne le bouton qui a l'id="toggle-movies". Exécute une action lorsqu'on clique sur ce bouton.*/
             let extraMovies = document.querySelectorAll('.movie-card.extra');/*Sélectionne Toutes les cartes de films qui ont la classe .extra (films cachés par défaut)*/
             /*Alternance entre l'écran et le masquage des films supplémentaires*/
             if (this.textContent === 'Plus des films') {
@@ -1027,8 +1062,8 @@
 
     <section>
         <div class="container mt-4">
-           <h2 class="featured-series-tv">FEATURED SERIES TV</h2> 
-           <div class="genre-filters-movies mb-4">
+            <h2 class="featured-series-tv">FEATURED SERIES TV</h2>
+            <div class="genre-filters-movies mb-4">
                 <button class="btn btn-danger filter-btn" data-filter="all">All</button>
                 <button class="btn btn-outline-danger filter-btn" data-filter="action">Actions</button>
                 <button class="btn btn-outline-danger filter-btn" data-filter="comedy">Policier</button>
@@ -1053,7 +1088,7 @@
                 <div class="movie-card-container1">
                     <div class="movie-card1 action visible1">ISRA 88 (2016)</div>
                 </div>
-                
+
                 <div class="movie-card-container1">
                     <div class="movie-card1 action extra">War Dogs (2016)</div>
                 </div>
@@ -1073,7 +1108,7 @@
                     <div class="movie-card1 policier extra">Assassin's Creed 3 (2016)</div>
                 </div>
             </div>
-            
+
             <button class="btn btn-danger mt-3" id="toggle-movies1">Plus des films</button>
         </div>
     </section>
@@ -1081,7 +1116,7 @@
 
     <script>
         document.querySelectorAll('.filter-btn').forEach(button => {/* Boucle sur bouton pour lui ajouter un gestionnaire d'événement.*/
-            button.addEventListener('click', function() {
+            button.addEventListener('click', function () {
                 let filter = this.getAttribute('data-filter');/*récupère la valeur de la valeur de data-filterdu bouton cliqué.*/
                 document.querySelectorAll('.movie-card1').forEach(movie => {
                     if (filter === 'all' || movie.classList.contains(filter)) {
@@ -1092,8 +1127,8 @@
                 });
             });
         });
-        
-        document.getElementById('toggle-movies1').addEventListener('click', function() {
+
+        document.getElementById('toggle-movies1').addEventListener('click', function () {
             let extraMovies = document.querySelectorAll('.movie-card1.extra');
             if (this.textContent === 'Plus des films') {
                 extraMovies.forEach(movie => movie.classList.add('visible1'));
@@ -1104,7 +1139,7 @@
             }
         });
     </script>
-    
+
 
 
     <div class="container mt-4">
@@ -1117,312 +1152,327 @@
                 <button id="next-btn"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
-                    <div class="movie-slider-inner">
-                    
-                        <div class="movie-card2">
-                            <img src="image/bfg.jpg" alt="Rien">
-                            <div class="movie-info">
-                                <div>Swiss Army Man</div>
-                                <div>2016</div>
-                                <div class="movie-price">15 Euro</div>
-                            </div>
-                        </div>
-                    
-                        <div class="movie-card2">
-                            <img src="image/img1.jpg" alt="rien">
-                            <div class="movie-info">
-                                <div>Me Before You</div>
-                                <div>2016</div>
-                                <div class="movie-price">15 Euro</div>
-                            </div>
-                        </div>
-                        
-                        <div class="movie-card2">
-                            <img src="image/img2.jpg" alt="rien">
-                            <div class="movie-info">
-                                <div>Deadpool</div>
-                                <div>2016</div>
-                                <div class="movie-price">15 Euro</div>
-                            </div>
-                        </div>
-                        
-                        <div class="movie-card2">
-                            <img src="image/img3.jpg" alt="Rien">
-                            <div class="movie-info">
-                                <div>Rogue One</div>
-                                <div>2016</div>
-                                <div class="movie-price">15 Euro</div>
-                            </div>
-                        </div>
-                        
-                        <div class="movie-card2">
-                            <img src="image/img4.jpg" alt="rien">
-                            <div class="movie-info">
-                                <div>Storks</div>
-                                <div>2016</div>
-                                <div class="movie-price">15 Euro</div>
-                            </div>
-                        </div>
-                        
-                        <div class="movie-card2">
-                            <img src="image/soldat.jpg" alt="rien">
-                            <div class="movie-info">
-                                <div>Happiness</div>
-                                <div>2016</div>
-                                <div class="movie-price">15 Euro</div>
-                            </div>
-                        </div>
-                        
-                        <div class="movie-card2">
-                            <img src="image/squid.jpg" alt="rien">
-                            <div class="movie-info">
-                                <div>Mechanic</div>
-                                <div>2016</div>
-                                <div class="movie-price">15 Euro</div>
-                            </div>
-                        </div>
-                        
-                        <div class="movie-card2">
-                            <img src="image/suit1.jpg" alt="rien">
-                            <div class="movie-info">
-                                <div>Timeless</div>
-                                <div>2016</div>
-                                <div class="movie-price">15 Euro</div>
-                            </div>
-                        </div>
-                    </div>
+
+        <div class="movie-slider-inner">
+            <div class="movie-card2">
+                <img src="image/bfg.jpg" alt="Rien">
+                <div class="movie-info">
+                    <div>Swiss Army Man</div>
+                    <div>2016</div>
+                    <div class="movie-price">15 Euro</div>
                 </div>
             </div>
-            
-           
-        <!-- section Contact Us Section -->
-        <div class="row">
-            <div class="col-12">
-                <h3 class="section-title">CONTACT US</h3>
-            </div>
-            <div class="col-md-6">
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" id="firstName" placeholder="FIRST NAME" required>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" id="lastName" placeholder="LAST NAME" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input type="email" class="form-control" id="email" placeholder="EMAIL" required>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" id="subject" placeholder="SUBJECT" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <textarea class="form-control" id="message" rows="5" placeholder="YOUR MESSAGE" required></textarea>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-danger" id="sendMessage">SEND MESSAGE</button>
-                            </div>
-                        </div>
-                    </form>
+
+            <div class="movie-card2">
+                <img src="image/img1.jpg" alt="rien">
+                <div class="movie-info">
+                    <div>Me Before You</div>
+                    <div>2016</div>
+                    <div class="movie-price">15 Euro</div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.76457410133!2d2.2769948739612534!3d48.85894658138325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sen!2sus!4v1646666227383!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            <div class="movie-card2">
+                <img src="image/img2.jpg" alt="rien">
+                <div class="movie-info">
+                    <div>Deadpool</div>
+                    <div>2016</div>
+                    <div class="movie-price">15 Euro</div>
+                </div>
+            </div>
+
+            <div class="movie-card2">
+                <img src="image/img3.jpg" alt="Rien">
+                <div class="movie-info">
+                    <div>Rogue One</div>
+                    <div>2016</div>
+                    <div class="movie-price">15 Euro</div>
+                </div>
+            </div>
+
+            <div class="movie-card2">
+                <img src="image/img4.jpg" alt="rien">
+                <div class="movie-info">
+                    <div>Storks</div>
+                    <div>2016</div>
+                    <div class="movie-price">15 Euro</div>
+                </div>
+            </div>
+
+            <div class="movie-card2">
+                <img src="image/soldat.jpg" alt="rien">
+                <div class="movie-info">
+                    <div>Happiness</div>
+                    <div>2016</div>
+                    <div class="movie-price">15 Euro</div>
+                </div>
+            </div>
+
+            <div class="movie-card2">
+                <img src="image/squid.jpg" alt="rien">
+                <div class="movie-info">
+                    <div>Mechanic</div>
+                    <div>2016</div>
+                    <div class="movie-price">15 Euro</div>
+                </div>
+            </div>
+
+            <div class="movie-card2">
+                <img src="image/suit1.jpg" alt="rien">
+                <div class="movie-info">
+                    <div>Timeless</div>
+                    <div>2016</div>
+                    <div class="movie-price">15 Euro</div>
                 </div>
             </div>
         </div>
-        
-        <!-- section pour l'affichage des entrees du formulaire -->
-        <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="formModalLabel">Form Submission</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+
+        <div class="col-md-4" id="movie-detail-container">
+            <div class="movie-detail d-none" id="movie-detail">
+                <div class="position-relative">
+                    <img id="detail-image" src="" alt="Movie Poster">
+                    <div class="play-btn">
+                        <i class="fas fa-play"></i>
                     </div>
-                    <div class="modal-body" id="modalBody">
-                        <!-- cadre affichant les donees -->
+                </div>
+    </div>
+    </div>
+
+
+
+
+    <!-- section Contact Us Section -->
+    <div class="row">
+        <div class="col-12">
+            <h3 class="section-title">CONTACT US</h3>
+        </div>
+        <div class="col-md-6">
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="firstName" placeholder="FIRST NAME" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="lastName" placeholder="LAST NAME" required>
+                        </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="email" class="form-control" id="email" placeholder="EMAIL" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="subject" placeholder="SUBJECT" required>
+                        </div>
                     </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <textarea class="form-control" id="message" rows="5" placeholder="YOUR MESSAGE"
+                                required></textarea>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-danger" id="sendMessage">SEND MESSAGE</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.76457410133!2d2.2769948739612534!3d48.85894658138325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sen!2sus!4v1646666227383!5m2!1sen!2sus"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- section pour l'affichage des entrees du formulaire -->
+    <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="formModalLabel">Form Submission</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    <!-- cadre affichant les donees -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
-        
-        <!-- section pour l'email -->
-        <div class="row text-center py-4">
-            <div class="col-12">
-                <h4>SUBSCRIBE TO US</h4>
-                <div class="input-group mb-3 w-50 mx-auto">
-                    <input type="text" class="form-control" placeholder="Enter your email...">
-                    <button class="btn btn-danger" type="button">SUBSCRIBE</button>
-                </div>
+    </div>
+
+    <!-- section pour l'email -->
+    <div class="row text-center py-4">
+        <div class="col-12">
+            <h4>SUBSCRIBE TO US</h4>
+            <div class="input-group mb-3 w-50 mx-auto">
+                <input type="text" class="form-control" placeholder="Enter your email...">
+                <button class="btn btn-danger" type="button">SUBSCRIBE</button>
             </div>
         </div>
-        
-        <!-- section pour le Footer -->
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-2">
-                        <h5 class="footer-title">RELEASE</h5>
-                        <ul class="footer-list">
-                            <li><a href="#">2022</a></li>
-                            <li><a href="#">2021</a></li>
-                            <li><a href="#">2020</a></li>
-                            <li><a href="#">2019</a></li>
-                            <li><a href="#">2018</a></li>
-                            <li><a href="#">2017</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="col-md-2">
-                        <h5 class="footer-title">MOVIES</h5>
-                        <ul class="footer-list">
-                            <li><a href="#">ADVENTURE</a></li>
-                            <li><a href="#">COMEDY</a></li>
-                            <li><a href="#">FANTASY</a></li>
-                            <li><a href="#">ACTION</a></li>
-                            <li><a href="#">MOVIES</a></li>
-                            <li><a href="#">HORROR</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="col-md-3">
-                        <h5 class="footer-title">REVIEW MOVIES</h5>
-                        <div class="row mb-2">
-                            <div class="col-6">
-                                <ul class="footer-list">
-                                    <li><a href="#">Comedy</a></li>
-                                    <li><a href="#">Horror</a></li>
-                                    <li><a href="#">Historical</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-6">
-                                <ul class="footer-list">
-                                    <li><a href="#">Romance</a></li>
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Drama</a></li>
-                                </ul>
-                            </div>
+    </div>
+
+    <!-- section pour le Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <h5 class="footer-title">RELEASE</h5>
+                    <ul class="footer-list">
+                        <li><a href="#">2022</a></li>
+                        <li><a href="#">2021</a></li>
+                        <li><a href="#">2020</a></li>
+                        <li><a href="#">2019</a></li>
+                        <li><a href="#">2018</a></li>
+                        <li><a href="#">2017</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2">
+                    <h5 class="footer-title">MOVIES</h5>
+                    <ul class="footer-list">
+                        <li><a href="#">ADVENTURE</a></li>
+                        <li><a href="#">COMEDY</a></li>
+                        <li><a href="#">FANTASY</a></li>
+                        <li><a href="#">ACTION</a></li>
+                        <li><a href="#">MOVIES</a></li>
+                        <li><a href="#">HORROR</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h5 class="footer-title">REVIEW MOVIES</h5>
+                    <div class="row mb-2">
+                        <div class="col-6">
+                            <ul class="footer-list">
+                                <li><a href="#">Comedy</a></li>
+                                <li><a href="#">Horror</a></li>
+                                <li><a href="#">Historical</a></li>
+                            </ul>
                         </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <ul class="footer-list">
-                                    <li><a href="#">Adventure</a></li>
-                                    <li><a href="#">Romance</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-6">
-                                <ul class="footer-list">
-                                    <li><a href="#">Love</a></li>
-                                    <li><a href="#">Comedy</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <ul class="footer-list">
-                                    <li><a href="#">Horror</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-6">
-                                <ul class="footer-list">
-                                    <li><a href="#">Historical</a></li>
-                                </ul>
-                            </div>
+                        <div class="col-6">
+                            <ul class="footer-list">
+                                <li><a href="#">Romance</a></li>
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Drama</a></li>
+                            </ul>
                         </div>
                     </div>
-                    
-                    <div class="col-md-2">
-                        <h5 class="footer-title">LATEST MOVIES</h5>
-                        <ul class="footer-list">
-                            <li><a href="#">Forrest Gump - 2015</a></li>
-                            <li><a href="#">A good day to die - 2015</a></li>
-                            <li><a href="#">Forrest Gump - 2015</a></li>
-                            <li><a href="#">A good day to die - 2015</a></li>
-                        </ul>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="footer-list">
+                                <li><a href="#">Adventure</a></li>
+                                <li><a href="#">Romance</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="footer-list">
+                                <li><a href="#">Love</a></li>
+                                <li><a href="#">Comedy</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    
-                    <div class="col-md-3">
-                        <h5 class="footer-title text-center">ALLEZ-CINE!</h5>
-                        <div class="row">
-                            <div class="col-4">
-                                <img src="image/bfg.jpg" alt="Movie" class="img-fluid mb-2">
-                            </div>
-                            <div class="col-4">
-                                <img src="image/conclave.webp" alt="Movie" class="img-fluid mb-2">
-                            </div>
-                            <div class="col-4">
-                                <img src="image/gladiator.webp" alt="Movie" class="img-fluid mb-2">
-                            </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="footer-list">
+                                <li><a href="#">Horror</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="footer-list">
+                                <li><a href="#">Historical</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                
-                <div class="row text-center mt-5">
-                    <div class="col-12">
-                        <h5>CONNECT US</h5>
-                        <div class="social-icons">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-youtube"></i></a>
-                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+
+                <div class="col-md-2">
+                    <h5 class="footer-title">LATEST MOVIES</h5>
+                    <ul class="footer-list">
+                        <li><a href="#">Forrest Gump - 2015</a></li>
+                        <li><a href="#">A good day to die - 2015</a></li>
+                        <li><a href="#">Forrest Gump - 2015</a></li>
+                        <li><a href="#">A good day to die - 2015</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h5 class="footer-title text-center">ALLEZ-CINE!</h5>
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="image/bfg.jpg" alt="Movie" class="img-fluid mb-2">
                         </div>
+                        <div class="col-4">
+                            <img src="image/conclave.webp" alt="Movie" class="img-fluid mb-2">
+                        </div>
+                        <div class="col-4">
+                            <img src="image/gladiator.webp" alt="Movie" class="img-fluid mb-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center mt-5">
+                <div class="col-12">
+                    <h5>CONNECT US</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+    </div>
+
     <script>
         // fonctionnalite pour le slide des films
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const sliderInner = document.querySelector('.movie-slider-inner');
             const prevBtn = document.getElementById('prevBtn');
             const nextBtn = document.getElementById('nextBtn');
-            const cardWidth = document.querySelector('.movie-card').offsetWidth + 10; 
+            const cardWidth = document.querySelector('.movie-card').offsetWidth + 10;
             const visibleCards = 4;
             const scrollAmount = cardWidth * visibleCards;
-            
-            prevBtn.addEventListener('click', function() {
+
+            prevBtn.addEventListener('click', function () {
                 sliderInner.scrollBy({
                     left: -scrollAmount,
                     behavior: 'smooth'
                 });
             });
-            
-            nextBtn.addEventListener('click', function() {
+
+            nextBtn.addEventListener('click', function () {
                 sliderInner.scrollBy({
                     left: scrollAmount,
                     behavior: 'smooth'
                 });
             });
-            
+
             // soumission du formulaire de contact
             const contactForm = document.getElementById('contactForm');
             const formModal = new bootstrap.Modal(document.getElementById('formModal'));
             const modalBody = document.getElementById('modalBody');
-            
-            contactForm.addEventListener('submit', function(e) {
+
+            contactForm.addEventListener('submit', function (e) {
                 e.preventDefault();
-                
+
                 // Obtenir les valeurs du formulaire
                 const firstName = document.getElementById('firstName').value;
                 const lastName = document.getElementById('lastName').value;
                 const email = document.getElementById('email').value;
                 const subject = document.getElementById('subject').value;
                 const message = document.getElementById('message').value;
-                
+
                 // affichage des modales
                 modalBody.innerHTML = `
                     <p><strong>First Name:</strong> ${firstName}</p>
@@ -1431,45 +1481,45 @@
                     <p><strong>Subject:</strong> ${subject}</p>
                     <p><strong>Message:</strong> ${message}</p>
                 `;
-                
+
                 // visualisation des modales
                 formModal.show();
-                
+
                 //renitialisation du formulaire
                 contactForm.reset();
             });
-            
+
             // Création du bouton Retour en haut
             function createBackToTopButton() {
                 // Création de l'élément de bouton
                 const backToTopBtn = document.createElement('div');
-                
+
                 // Création de l'élément de l'icône
                 const icon = document.createElement('i');
                 icon.className = 'fas fa-arrow-up';
-                
+
                 // Ajout de l'icône au bouton
                 backToTopBtn.appendChild(icon);
-                
+
                 // Ajout d'une classe au bouton
                 backToTopBtn.className = 'back-to-top';
-                
+
                 // Ajout d'un écouteur d'événement de clic
-                backToTopBtn.addEventListener('click', function() {
+                backToTopBtn.addEventListener('click', function () {
                     window.scrollTo({
                         top: 0,
                         behavior: 'smooth'
                     });
                 });
-                
+
                 // Ajout du bouton au corps
                 document.body.appendChild(backToTopBtn);
-                
+
                 // Affichage et masquage du bouton 
-                window.addEventListener('scroll', function() {
+                window.addEventListener('scroll', function () {
                     const scrollPosition = window.scrollY;
                     const headerHeight = document.getElementById('header').offsetHeight;
-                    
+
                     if (scrollPosition > headerHeight) {
                         backToTopBtn.style.opacity = '1';
                     } else {
