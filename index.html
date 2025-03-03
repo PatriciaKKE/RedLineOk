@@ -283,7 +283,7 @@
             margin-bottom: 20px;
         }
 
-        .movie-card {
+        .movie-card0 {
             display: none;
             background-color: #ddd;
             width: 100%;
@@ -372,7 +372,7 @@
         }
 
 
-        .movie-card2 {
+        .movie-card {
             position: relative;
             transition: transform 0.3s;
             margin-bottom: 20px;
@@ -382,22 +382,17 @@
             color: white;
         }
 
-        .movie-card2:hover {
+        .movie-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .movie-card2 img {
+        .movie-card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
         }
 
-        .movie-title {
-            font-size: 1rem;
-            padding: 10px;
-            margin: 0;
-        }
 
         .movie-price {
             color: #ff4d4d;
@@ -1006,41 +1001,41 @@
 
             <div class="row" id="movies-container">
                 <div class="movie-card-container">
-                    <div class="movie-card action visible">God's Compass (2016)</div>
+                    <div class="movie-card0 action visible">God's Compass (2016)</div>
                 </div>
                 <div class="movie-card-container">
-                    <div class="movie-card action visible">Bad Moms (2016)</div>
+                    <div class="movie-card0 action visible">Bad Moms (2016)</div>
                 </div>
                 <div class="movie-card-container">
-                    <div class="movie-card action visible">Jason Bourne (2016)</div>
+                    <div class="movie-card0 action visible">Jason Bourne (2016)</div>
                 </div>
                 <div class="movie-card-container">
-                    <div class="movie-card policier visible">Rezort (2016)</div>
+                    <div class="movie-card0 policier visible">Rezort (2016)</div>
                 </div>
                 <div class="movie-card-container">
-                    <div class="movie-card policier visible">Peter (2016)</div>
+                    <div class="movie-card0 policier visible">Peter (2016)</div>
                 </div>
                 <div class="movie-card-container">
-                    <div class="movie-card action visible">ISRA 88 (2016)</div>
+                    <div class="movie-card0 action visible">ISRA 88 (2016)</div>
                 </div>
 
                 <div class="movie-card-container">
-                    <div class="movie-card action extra">War Dogs (2016)</div>
+                    <div class="movie-card0 action extra">War Dogs (2016)</div>
                 </div>
                 <div class="movie-card-container">
-                    <div class="movie-card policier extra">The Other Side (2016)</div>
+                    <div class="movie-card0 policier extra">The Other Side (2016)</div>
                 </div>
                 <div class="movie-card-container">
-                    <div class="movie-card action extra">Civil War (2016)</div>
+                    <div class="movie-card0 action extra">Civil War (2016)</div>
                 </div>
                 <div class="movie-card-container">
-                    <div class="movie-card policier extra">The Secret Life of Pets (2016)</div>
+                    <div class="movie-card0 policier extra">The Secret Life of Pets (2016)</div>
                 </div>
                 <div class="movie-card-container">
-                    <div class="movie-card action extra">The Jungle Book (2016)</div>
+                    <div class="movie-card0 action extra">The Jungle Book (2016)</div>
                 </div>
                 <div class="movie-card-container">
-                    <div class="movie-card policier extra">Assassin's Creed 3 (2016)</div>
+                    <div class="movie-card0 policier extra">Assassin's Creed 3 (2016)</div>
                 </div>
             </div>
 
@@ -1052,7 +1047,7 @@
         document.querySelectorAll('.filter-btn').forEach(button => { /*Sélectionne tous les éléments qui ont la classe .filter-btn (des boutons de filtrage).forEach(button => { ... }) : Boucle tous sur bouton sélectionné pour lui ajouter un gestionnaire d'événement*/
             button.addEventListener('click', function () { /*Attache un gestionnaire d'événement click à notre bouton de filtrage.*/
                 let filter = this.getAttribute('data-filter');/*récupère la valeur de l'attribut data-filter du bouton*/
-                document.querySelectorAll('.movie-card').forEach(movie => {/*Sélectionne Toutes les cartes de films*/
+                document.querySelectorAll('.movie-card0').forEach(movie => {/*Sélectionne Toutes les cartes de films*/
 
                     if (filter === 'all' || movie.classList.contains(filter)) {
                         movie.classList.add('visible');
@@ -1064,7 +1059,7 @@
         });
 
         document.getElementById('toggle-movies').addEventListener('click', function () {/*Sélectionne le bouton qui a l'id="toggle-movies". Exécute une action lorsqu'on clique sur ce bouton.*/
-            let extraMovies = document.querySelectorAll('.movie-card.extra');/*Sélectionne Toutes les cartes de films qui ont la classe .extra (films cachés par défaut)*/
+            let extraMovies = document.querySelectorAll('.movie-card0.extra');/*Sélectionne Toutes les cartes de films qui ont la classe .extra (films cachés par défaut)*/
             /*Alternance entre l'écran et le masquage des films supplémentaires*/
             if (this.textContent === 'Plus des films') {
                 extraMovies.forEach(movie => movie.classList.add('visible'));/*Ajoute visibleà notre film supplémentaire pour les afficher.*/
@@ -1168,76 +1163,9 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="row" id="movie-list">
-                    <div class="movie-card2">
-                        <img src="image/bfg.jpg" alt="Rien">
-                    </div>
 
-                    <div class="movie-card2">
-                        <img src="image/img1.jpg" alt="rien">
-                        <div class="movie-info">
-                            <div>Me Before You</div>
-                            <div>2016</div>
-                            <div class="movie-price">15 Euro</div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card2">
-                        <img src="image/img2.jpg" alt="rien">
-                        <div class="movie-info">
-                            <div>Deadpool</div>
-                            <div>2016</div>
-                            <div class="movie-price">15 Euro</div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card2">
-                        <img src="image/img3.jpg" alt="Rien">
-                        <div class="movie-info">
-                            <div>Rogue One</div>
-                            <div>2016</div>
-                            <div class="movie-price">15 Euro</div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card2">
-                        <img src="image/img4.jpg" alt="rien">
-                        <div class="movie-info">
-                            <div>Storks</div>
-                            <div>2016</div>
-                            <div class="movie-price">15 Euro</div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card2">
-                        <img src="image/soldat.jpg" alt="rien">
-                        <div class="movie-info">
-                            <div>Happiness</div>
-                            <div>2016</div>
-                            <div class="movie-price">15 Euro</div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card2">
-                        <img src="image/squid.jpg" alt="rien">
-                        <div class="movie-info">
-                            <div>Mechanic</div>
-                            <div>2016</div>
-                            <div class="movie-price">15 Euro</div>
-                        </div>
-                    </div>
-
-                    <div class="movie-card2">
-                        <img src="image/suit1.jpg" alt="rien">
-                        <div class="movie-info">
-                            <div>Timeless</div>
-                            <div>2016</div>
-                            <div class="movie-price">15 Euro</div>
-                        </div>
-                    </div>
                 </div>
             </div>
-
-
 
             <div class="col-md-4" id="movie-detail-container">
                 <div class="movie-detail d-none" id="movie-detail">
@@ -1273,7 +1201,7 @@
             {
                 id: 1,
                 title: "Squid Game",
-                image: "/api/placeholder/400/320",
+                image: "image/squid.jpg",
                 price: "15 Euro",
                 year: "2021",
                 genres: "Drama | Thriller | Action",
@@ -1282,7 +1210,7 @@
             {
                 id: 2,
                 title: "Capitain america",
-                image: "/api/placeholder/400/320",
+                image: "image/squid.jpg",
                 price: "15 Euro",
                 year: "2021",
                 genres: "Drama | Thriller | Action",
@@ -1291,7 +1219,7 @@
             {
                 id: 3,
                 title: "Happiness",
-                image: "/api/placeholder/400/320",
+                image: "image/squid.jpg",
                 price: "15 Euro",
                 year: "2017",
                 genres: "Drama | War",
@@ -1300,7 +1228,7 @@
             {
                 id: 4,
                 title: "Mechanic",
-                image: "/api/placeholder/400/320",
+                image: "image/squid.jpg",
                 price: "15 Euro",
                 year: "2016",
                 genres: "Action | Crime | Thriller",
@@ -1309,7 +1237,7 @@
             {
                 id: 5,
                 title: "Storks",
-                image: "/api/placeholder/400/320",
+                image: "image/squid.jpg",
                 price: "15 Euro",
                 year: "2016",
                 genres: "Drama | Adventure | Family",
@@ -1318,7 +1246,7 @@
             {
                 id: 6,
                 title: "Swiss Army Man",
-                image: "/api/placeholder/400/320",
+                image: "image/squid.jpg",
                 price: "15 Euro",
                 year: "2016",
                 genres: "Comedy | Drama | Fantasy",
@@ -1327,7 +1255,7 @@
             {
                 id: 7,
                 title: "Me Before You",
-                image: "/api/placeholder/400/320",
+                image: "image/squid.jpg",
                 price: "15 Euro",
                 year: "2016",
                 genres: "Drama | Romance",
@@ -1336,7 +1264,7 @@
             {
                 id: 8,
                 title: "Deadpool",
-                image: "/api/placeholder/400/320",
+                image: "image/squid.jpg",
                 price: "15 Euro",
                 year: "2016",
                 genres: "Action | Comedy | Adventure",
@@ -1453,7 +1381,7 @@
             <div class="map-container">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.76457410133!2d2.2769948739612534!3d48.85894658138325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sen!2sus!4v1646666227383!5m2!1sen!2sus"
-                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe><!--integration de google map-->
             </div>
         </div>
     </div>
