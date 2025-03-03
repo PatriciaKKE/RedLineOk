@@ -1333,7 +1333,10 @@
         const moviesPerPage = 4;
 
         function renderMovies() {
+            const movieListContainer = document.getElementById('movie-list');
+            movieListContainer.innerHTML = '';
             
+            const endIndex = Math.min(currentStartIndex + moviesPerPage, movies.length);
         }
 
     </script>
