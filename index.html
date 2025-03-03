@@ -1351,6 +1351,9 @@
                     </div>
                 `;
                 movieListContainer.appendChild(movieCard);
+                const card = movieCard.querySelector('.movie-card');
+                card.addEventListener('click', () => showMovieDetail(movie.id));
+            }
 
     </script>
 
