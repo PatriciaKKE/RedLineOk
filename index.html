@@ -69,6 +69,7 @@
         .carousel-item {
             width: 100%;
             height: 100vh;
+            position: relative;
         }
 
         .carousel-item::before {
@@ -1210,7 +1211,7 @@
             {
                 id: 2,
                 title: "Capitain america",
-                image: "image/squid.jpg",
+                image: "image/sololeving.webp",
                 price: "15 Euro",
                 year: "2021",
                 genres: "Drama | Thriller | Action",
@@ -1219,7 +1220,7 @@
             {
                 id: 3,
                 title: "Happiness",
-                image: "image/squid.jpg",
+                image: "image/wicked.webp",
                 price: "15 Euro",
                 year: "2017",
                 genres: "Drama | War",
@@ -1228,7 +1229,7 @@
             {
                 id: 4,
                 title: "Mechanic",
-                image: "image/squid.jpg",
+                image: "image/demon.webp",
                 price: "15 Euro",
                 year: "2016",
                 genres: "Action | Crime | Thriller",
@@ -1237,7 +1238,7 @@
             {
                 id: 5,
                 title: "Storks",
-                image: "image/squid.jpg",
+                image: "image/retour en force.webp",
                 price: "15 Euro",
                 year: "2016",
                 genres: "Drama | Adventure | Family",
@@ -1246,7 +1247,7 @@
             {
                 id: 6,
                 title: "Swiss Army Man",
-                image: "image/squid.jpg",
+                image: "image/gladiator.webp",
                 price: "15 Euro",
                 year: "2016",
                 genres: "Comedy | Drama | Fantasy",
@@ -1264,7 +1265,7 @@
             {
                 id: 8,
                 title: "Deadpool",
-                image: "image/squid.jpg",
+                image: "image/img4.jpg",
                 price: "15 Euro",
                 year: "2016",
                 genres: "Action | Comedy | Adventure",
@@ -1275,14 +1276,14 @@
         let currentStartIndex = 0;
         const moviesPerPage = 4;
 
-        function renderMovies() {
+        function renderMovies() { /*affichage des films*/
             const movieListContainer = document.getElementById('movie-list');
-            movieListContainer.innerHTML = '';
+            movieListContainer.innerHTML = '';/*empeche les affichage duplique*/
 
-            const endIndex = Math.min(currentStartIndex + moviesPerPage, movies.length);
+            const endIndex = Math.min(currentStartIndex + moviesPerPage, movies.length);/*si il reste assez de film. si on arrive a la fin de la liste*/
 
 
-            for (let i = currentStartIndex; i < endIndex; i++) {
+            for (let i = currentStartIndex; i < endIndex; i++) {/*pour afficher les films*/
                 const movie = movies[i];
                 const movieCard = document.createElement('div');
                 movieCard.className = 'col-md-3 col-sm-6';
@@ -1294,15 +1295,16 @@
                     </div>
                 `;
                 movieListContainer.appendChild(movieCard);
-                const card = movieCard.querySelector('.movie-card');
+                const card = movieCard.querySelector('.movie-card');/*Récupère la carte de film (.movie-card)*/
                 card.addEventListener('click', () => showMovieDetail(movie.id));
             }
         }
 
-        function showMovieDetail(movieId) {
+        function showMovieDetail(movieId) {/*affichage des details des films*/
             const movie = movies.find(m => m.id === movieId);
             if (!movie) return;
 
+            /*mise a jour des details du film*/
             document.getElementById('detail-image').src = movie.image;
             document.getElementById('detail-title').textContent = movie.title;
             document.getElementById('detail-story').textContent = `Story line: ${movie.story}`;
@@ -1310,11 +1312,11 @@
             document.getElementById('detail-genres').textContent = movie.genres;
             document.getElementById('detail-price').textContent = movie.price;
 
-            document.getElementById('movie-detail').classList.remove('d-none');
+            document.getElementById('movie-detail').classList.remove('d-none');/*Supprime la classe d-none (Bootstrap) pour rendre la section visible*/
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            renderMovies();
+        document.addEventListener('DOMContentLoaded', () => {/*Attend que le DOM soit chargé avant d'exécuter le code.*/
+            renderMovies();/*affichage initiale des films*/
 
             document.getElementById('prev-btn').addEventListener('click', () => {
                 if (currentStartIndex > 0) {
@@ -1323,6 +1325,7 @@
                 }
             });
 
+            /*gestion des boutons d'aller et retour*/
             document.getElementById('next-btn').addEventListener('click', () => {
                 if (currentStartIndex + moviesPerPage < movies.length) {
                     currentStartIndex += moviesPerPage;
@@ -1330,12 +1333,11 @@
                 }
             });
 
+            /*affiche les détails du premier film au chargement*/
             if (movies.length > 0) {
                 showMovieDetail(movies[0].id);
             }
         });
-
-
     </script>
 
 
