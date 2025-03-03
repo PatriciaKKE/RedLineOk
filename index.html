@@ -1339,6 +1339,19 @@
             const endIndex = Math.min(currentStartIndex + moviesPerPage, movies.length);
         }
 
+        for (let i = currentStartIndex; i < endIndex; i++) {
+                const movie = movies[i];
+                const movieCard = document.createElement('div');
+                movieCard.className = 'col-md-3 col-sm-6';
+                movieCard.innerHTML = `
+                    <div class="movie-card" data-id="${movie.id}">
+                        <img src="${movie.image}" alt="${movie.title}">
+                        <h3 class="movie-title">${movie.title}</h3>
+                        <p class="movie-price">${movie.price}</p>
+                    </div>
+                `;
+                movieListContainer.appendChild(movieCard);
+
     </script>
 
 
