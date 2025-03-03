@@ -1357,7 +1357,17 @@
         }
 
         function showMovieDetail(movieId) {
+            const movie = movies.find(m => m.id === movieId);
+            if (!movie) return;
+
+            document.getElementById('detail-image').src = movie.image;
+            document.getElementById('detail-title').textContent = movie.title;
+            document.getElementById('detail-story').textContent = `Story line: ${movie.story}`;
+            document.getElementById('detail-release').textContent = movie.year;
+            document.getElementById('detail-genres').textContent = movie.genres;
+            document.getElementById('detail-price').textContent = movie.price;
             
+
         }
 
 
